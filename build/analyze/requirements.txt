@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pymysql
+pydantic
+alembic
+requests
+motor
+typing
+requests
+xmltodict
+pymongo
+datetime

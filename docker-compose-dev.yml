@@ -1,0 +1,90 @@
+version: '3'
+services:
+  anemos-api:
+    container_name: anemos-api
+    build:
+      context: .
+      dockerfile: ./build/api/Dockerfile
+    volumes:
+      - ./src/:/src/
+      - ./:/workspace/
+    restart: always
+    ports:
+      - 5000:80
+    networks:
+      - solufit
+
+  anemos-autoexe:
+    container_name: anemos-autoexe
+    build:
+      context: .
+      dockerfile: ./build/auto_execute/Dockerfile
+    environment:
+      TZ: 'Asia/Tokyo'
+      ANALYZE: 'http://solufit-hazard-analyze'
+    networks:
+      - solufit
+    restart: always
+  
+  anemos-analyze:
+    container_name: solufit-hazard-analyze
+    build:
+      context: .
+      dockerfile: ./build/analyze/Dockerfile
+    environment:
+      TZ: 'Asia/Tokyo'
+      BSKY_USER: 'siestabot.bsky.social'
+      BSKY_PASS: 'dNJ2U23EU2Wr-ny'
+      ALERT_URL: 'https://discord.com/api/webhooks/1204746660228366376/EcsaNqpivJTIpYLYqtqlW1vI0p_aESbNMLkBc3vx1Af0xBC5ZFeQBHg_K_msRom3473L'
+      STAGE: 'DEVELOP'
+    volumes:
+      - ./src/logs:/var/log/analyze/
+      - ./src/db/hazard/versions:/src/db/hazard/versions
+      - ./src:/src/
+    networks:
+      - solufit
+    expose:
+      - 8000
+    ports:
+      - 13080:80
+    depends_on:
+      - anemos-hazard-database
+      - anemos-hazard-telegram
+    restart: always
+
+  anemos-maria-database:
+    container_name: anemos-maria-database
+    image: mariadb
+    environment:
+      TZ: 'Asia/Tokyo'
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    networks:
+      - solufit
+    expose:
+      - 3306
+    volumes:
+      - ./db/hazard:/var/lib/mysql
+    restart: always
+  
+  anemos-mongo-database:
+    container_name: anemos-mongo-database
+    image: mongo
+    networks:
+      - solufit
+    restart: always
+    environment:
+      TZ: 'Asia/Tokyo'
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
+    volumes:
+      - ./db/telegram:/data/db
+    ports:
+      - 27171:27017
+
+networks:
+  solufit:
+    external: True

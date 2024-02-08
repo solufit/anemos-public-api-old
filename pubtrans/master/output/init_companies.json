@@ -1,0 +1,2926 @@
+[
+  {
+    "SOPID": "f7b58d85-618a-4a76-8078-256c9d8a6258",
+    "Name": {
+      "ja": "JR北海道",
+      "en": "JR Hokkaido",
+      "ko": "JR 홋카이도",
+      "zh": "JR北海道"
+    },
+    "Link": "http://www.jrhokkaido.co.jp/",
+    "Arias": [
+      "JR北海道",
+      "ジェイアールホッカイドウ",
+      "北海道旅客鉄道株式会社",
+      "JR北海道",
+      "1"
+    ]
+  },
+  {
+    "SOPID": "2c181895-ada1-4bb0-829e-a0e5f8a8b4a1",
+    "Name": {
+      "ja": "JR東日本",
+      "en": "JR East",
+      "ko": "JR 동일본",
+      "zh": "JR东日本"
+    },
+    "Link": "http://www.jreast.co.jp/",
+    "Arias": [
+      "JR東日本",
+      "ジェイアールヒガシニホン",
+      "東日本旅客鉄道株式会社",
+      "JR東日本",
+      "2"
+    ]
+  },
+  {
+    "SOPID": "288f78e5-db18-40cd-9961-a80296399759",
+    "Name": {
+      "ja": "JR東海",
+      "en": "JR Tokai",
+      "ko": "JR 도카이",
+      "zh": "JR东海"
+    },
+    "Link": "http://jr-central.co.jp/",
+    "Arias": [
+      "JR東海",
+      "ジェイアールトウカイ",
+      "東海旅客鉄道株式会社",
+      "JR東海",
+      "3"
+    ]
+  },
+  {
+    "SOPID": "1eea13ad-3447-412a-aa9f-9706e275c173",
+    "Name": {
+      "ja": "JR西日本",
+      "en": "JR West",
+      "ko": "JR 서일본",
+      "zh": "JR西日本"
+    },
+    "Link": "http://www.westjr.co.jp/",
+    "Arias": [
+      "JR西日本",
+      "ジェイアールニシニホン",
+      "西日本旅客鉄道株式会社",
+      "JR西日本",
+      "4"
+    ]
+  },
+  {
+    "SOPID": "92bd697c-af26-4305-91e7-6a30dcfd1cfe",
+    "Name": {
+      "ja": "JR四国",
+      "en": "JR Shikoku",
+      "ko": "JR 시코쿠",
+      "zh": "JR四国"
+    },
+    "Link": "http://www.jr-shikoku.co.jp/",
+    "Arias": [
+      "JR四国",
+      "ジェイアールシコク",
+      "四国旅客鉄道株式会社",
+      "JR四国",
+      "5"
+    ]
+  },
+  {
+    "SOPID": "2b762d89-2119-4905-83a6-aeb0df100959",
+    "Name": {
+      "ja": "JR九州",
+      "en": "JR Kyushu",
+      "ko": "JR 규슈",
+      "zh": "JR九州"
+    },
+    "Link": "http://www.jrkyushu.co.jp/",
+    "Arias": [
+      "JR九州",
+      "ジェイアールキュウシュウ",
+      "九州旅客鉄道株式会社",
+      "JR九州",
+      "6"
+    ]
+  },
+  {
+    "SOPID": "5ece6aeb-2018-4b0f-86e7-e980d1aa6bc5",
+    "Name": {
+      "ja": "東武鉄道",
+      "en": "Tobu Railway",
+      "ko": "도부 철도",
+      "zh": "东武铁道"
+    },
+    "Link": "http://www.tobu.co.jp/",
+    "Arias": [
+      "東武鉄道",
+      "トウブテツドウ",
+      "東武鉄道株式会社",
+      "東武",
+      "11"
+    ]
+  },
+  {
+    "SOPID": "88dfb375-6225-4217-aebe-e197d4917658",
+    "Name": {
+      "ja": "西武鉄道",
+      "en": "Seibu Railway",
+      "ko": "세이부 철도",
+      "zh": "西武铁道"
+    },
+    "Link": "http://www.seibu-group.co.jp/railways/",
+    "Arias": [
+      "西武鉄道",
+      "セイブテツドウ",
+      "西武鉄道株式会社",
+      "西武",
+      "12"
+    ]
+  },
+  {
+    "SOPID": "26f4b3a7-5331-4d5d-a944-fa7836f21902",
+    "Name": {
+      "ja": "京成電鉄",
+      "en": "Keisei Electric Railway",
+      "ko": "게이세이 전철",
+      "zh": "京成电铁"
+    },
+    "Link": "http://www.keisei.co.jp/",
+    "Arias": [
+      "京成電鉄",
+      "ケイセイデンテツ",
+      "京成電鉄株式会社",
+      "京成",
+      "13"
+    ]
+  },
+  {
+    "SOPID": "d3fe283d-1d86-450a-b160-435e1b9223d1",
+    "Name": {
+      "ja": "京王電鉄",
+      "en": "Keio Electric Railway",
+      "ko": "게이오 전철",
+      "zh": "京王电铁"
+    },
+    "Link": "http://www.keio.co.jp/",
+    "Arias": [
+      "京王電鉄",
+      "ケイオウデンテツ",
+      "京王電鉄株式会社",
+      "京王",
+      "14"
+    ]
+  },
+  {
+    "SOPID": "9d88d336-8efb-4054-8b7d-3a8a556504fd",
+    "Name": {
+      "ja": "小田急電鉄",
+      "en": "Odakyu Electric Railway",
+      "ko": "오다큐 전철",
+      "zh": "小田急电铁"
+    },
+    "Link": "http://www.odakyu.jp/",
+    "Arias": [
+      "小田急電鉄",
+      "オダキュウデンテツ",
+      "小田急電鉄株式会社",
+      "小田急",
+      "15"
+    ]
+  },
+  {
+    "SOPID": "9cfce327-f14c-4701-9691-0c0a0e8d0893",
+    "Name": {
+      "ja": "東急電鉄",
+      "en": "Tokyu Corporation",
+      "ko": "도큐 전철",
+      "zh": "东急电铁"
+    },
+    "Link": "http://www.tokyu.co.jp/",
+    "Arias": [
+      "東急電鉄",
+      "トウキュウデンテツ",
+      "東京急行電鉄株式会社",
+      "東急",
+      "16"
+    ]
+  },
+  {
+    "SOPID": "094e0ece-b781-4664-ac44-d82b30f9dcf7",
+    "Name": {
+      "ja": "京急電鉄",
+      "en": "Keikyu Electric Railway",
+      "ko": "게이큐 전철",
+      "zh": "京急电铁"
+    },
+    "Link": "http://www.keikyu.co.jp/",
+    "Arias": [
+      "京急電鉄",
+      "ケイキュウデンテツ",
+      "京浜急行電鉄株式会社",
+      "京急",
+      "17"
+    ]
+  },
+  {
+    "SOPID": "0db534e0-2282-42db-b7b9-15bb21eadb1e",
+    "Name": {
+      "ja": "東京メトロ",
+      "en": "Tokyo Metro",
+      "ko": "도쿄 메트로",
+      "zh": "东京地铁"
+    },
+    "Link": "http://www.tokyometro.jp/",
+    "Arias": [
+      "東京メトロ",
+      "トウキョウメトロ",
+      "東京地下鉄株式会社",
+      "東京メトロ",
+      "18"
+    ]
+  },
+  {
+    "SOPID": "a801c09c-09e0-4c4e-add2-c7260d8b5082",
+    "Name": {
+      "ja": "相模鉄道",
+      "en": "Sagami Railway",
+      "ko": "사가미 철도",
+      "zh": "相模铁道"
+    },
+    "Link": "http://www.sotetsu.co.jp/",
+    "Arias": [
+      "相模鉄道",
+      "サガミテツドウ",
+      "相模鉄道株式会社",
+      "相鉄",
+      "19"
+    ]
+  },
+  {
+    "SOPID": "5ceeeb04-5553-4cab-8e61-2566c260f07b",
+    "Name": {
+      "ja": "名古屋鉄道",
+      "en": "Nagoya Railway",
+      "ko": "나고야 철도",
+      "zh": "名古屋铁道"
+    },
+    "Link": "http://www.meitetsu.co.jp/",
+    "Arias": [
+      "名古屋鉄道",
+      "ナゴヤテツドウ",
+      "名古屋鉄道株式会社",
+      "名鉄",
+      "20"
+    ]
+  },
+  {
+    "SOPID": "763386e8-5c9a-411a-b1ba-63c8ce2db789",
+    "Name": {
+      "ja": "近畿日本鉄道",
+      "en": "Kinki Nippon Railway",
+      "ko": "긴키 일본 철도",
+      "zh": "近畿日本铁道"
+    },
+    "Link": "http://www.kintetsu.co.jp/",
+    "Arias": [
+      "近畿日本鉄道",
+      "キンキニホンテツドウ",
+      "近畿日本鉄道株式会社",
+      "近鉄",
+      "21"
+    ]
+  },
+  {
+    "SOPID": "e8fb509a-a04a-47a2-a580-4a5e8f8ef90e",
+    "Name": {
+      "ja": "南海電鉄",
+      "en": "Nankai Electric Railway",
+      "ko": "난카이 전철",
+      "zh": "南海电铁"
+    },
+    "Link": "http://www.nankai.co.jp/",
+    "Arias": [
+      "南海電鉄",
+      "ナンカイデンテツ",
+      "南海電気鉄道株式会社",
+      "南海",
+      "22"
+    ]
+  },
+  {
+    "SOPID": "2bb76eee-2ff1-488a-baec-14408169b59a",
+    "Name": {
+      "ja": "京阪電鉄",
+      "en": "Keihan Electric Railway",
+      "ko": "게이한 전철",
+      "zh": "京阪电车"
+    },
+    "Link": "http://www.keihan.co.jp/",
+    "Arias": [
+      "京阪電鉄",
+      "ケイハンデンテツ",
+      "京阪電気鉄道株式会社",
+      "京阪",
+      "23"
+    ]
+  },
+  {
+    "SOPID": "bff25847-bcf9-4119-9d36-4db5ff9e150d",
+    "Name": {
+      "ja": "阪急電鉄",
+      "en": "Hankyu Corporation",
+      "ko": "한큐 전철",
+      "zh": "阪急电铁"
+    },
+    "Link": "http://rail.hankyu.co.jp/",
+    "Arias": [
+      "阪急電鉄",
+      "ハンキュウデンテツ",
+      "阪急電鉄株式会社",
+      "阪急",
+      "24"
+    ]
+  },
+  {
+    "SOPID": "9419a6ff-b6ca-4d11-9838-6d42805cf7f8",
+    "Name": {
+      "ja": "阪神電鉄",
+      "en": "Hanshin Electric Railway",
+      "ko": "한신 전철",
+      "zh": "阪神电铁"
+    },
+    "Link": "http://rail.hanshin.co.jp/",
+    "Arias": [
+      "阪神電鉄",
+      "ハンシンデンテツ",
+      "阪神電気鉄道株式会社",
+      "阪神",
+      "25"
+    ]
+  },
+  {
+    "SOPID": "9ba4cdb5-30d2-449d-b4c4-ab048e25b79a",
+    "Name": {
+      "ja": "西日本鉄道",
+      "en": "West Japan Railway",
+      "ko": "서일본 철도",
+      "zh": "西日本旅客铁道"
+    },
+    "Link": "http://www.nishitetsu.co.jp/",
+    "Arias": [
+      "西日本鉄道",
+      "ニシニホンテツドウ",
+      "西日本鉄道株式会社",
+      "西鉄",
+      "26"
+    ]
+  },
+  {
+    "SOPID": "98a9a7ab-6dac-44a2-b8fb-cc22ec70bcf0",
+    "Name": {
+      "ja": "札幌市交通局",
+      "en": "Sapporo City Transportation Bureau",
+      "ko": "삿포로시 교통국",
+      "zh": "札幌市交通局"
+    },
+    "Link": "http://www.city.sapporo.jp/st/",
+    "Arias": [
+      "札幌市交通局",
+      "サッポロシコウツウキョク",
+      "札幌市交通局",
+      "札幌市交通局",
+      "101"
+    ]
+  },
+  {
+    "SOPID": "f96fc5fe-a8e6-4ec9-a79b-1d2c2313c360",
+    "Name": {
+      "ja": "函館市交通局",
+      "en": "Hakodate City Transportation Bureau",
+      "ko": "하코다테시 교통국",
+      "zh": "函馆市交通局"
+    },
+    "Link": "http://www.city.hakodate.hokkaido.jp/transport/",
+    "Arias": [
+      "函館市交通局",
+      "ハコダテシコウツウキョク",
+      "函館市交通局",
+      "函館市電",
+      "102"
+    ]
+  },
+  {
+    "SOPID": "339a46be-76b7-4275-a06b-b2afce842632",
+    "Name": {
+      "ja": "北海道ちほく高原鉄道",
+      "en": "Hokkaido Chihoku Kogen Railway",
+      "ko": "홋카이도 치호쿠 고원 철도",
+      "zh": "北海道地方高原铁道"
+    },
+    "Link": "",
+    "Arias": [
+      "北海道ちほく高原鉄道",
+      "ホッカイドウチホクコウゲンテツドウ",
+      "北海道ちほく高原鉄道株式会社",
+      "北海道ちほく高原鉄道",
+      "103"
+    ]
+  },
+  {
+    "SOPID": "547d1b1a-a44f-444e-a69e-d58f5d48fce2",
+    "Name": {
+      "ja": "道南いさりび鉄道",
+      "en": "Southern Hokkaido Railway",
+      "ko": "도남 이사리비 철도",
+      "zh": "道南铁路"
+    },
+    "Link": "http://www.shr-isaribi.jp",
+    "Arias": [
+      "道南いさりび鉄道",
+      "ドウナンイサリビテツドウ",
+      "道南いさりび鉄道株式会社",
+      "道南いさりび",
+      "248"
+    ]
+  },
+  {
+    "SOPID": "4dccb8f4-e36b-4425-a6dc-7cff328d79ea",
+    "Name": {
+      "ja": "津軽鉄道",
+      "en": "Tsugaru Railway",
+      "ko": "쓰가루 철도",
+      "zh": "津轻铁道"
+    },
+    "Link": "http://tsutetsu.com/",
+    "Arias": [
+      "津軽鉄道",
+      "ツガルテツドウ",
+      "津軽鉄道株式会社",
+      "津軽鉄道",
+      "104"
+    ]
+  },
+  {
+    "SOPID": "bcf75832-92b5-47f2-b26d-7c1cbe4b6af3",
+    "Name": {
+      "ja": "弘南鉄道",
+      "en": "Konan Railway",
+      "ko": "홍남철도",
+      "zh": "甲南铁道"
+    },
+    "Link": "http://konantetsudo.jp/",
+    "Arias": [
+      "弘南鉄道",
+      "コウナンテツドウ",
+      "弘南鉄道",
+      "弘南鉄道",
+      "105"
+    ]
+  },
+  {
+    "SOPID": "c357c2d2-9116-4a72-b82e-74d3348e9522",
+    "Name": {
+      "ja": "十和田観光電鉄",
+      "en": "Towada Kanko Railway",
+      "ko": "토와다 관광 전철",
+      "zh": "十和田观光铁道"
+    },
+    "Link": "http://www.toutetsu.co.jp/",
+    "Arias": [
+      "十和田観光電鉄",
+      "トワダカンコウデンデツ",
+      "十和田観光電鉄株式会社",
+      "十和田観光電鉄",
+      "106"
+    ]
+  },
+  {
+    "SOPID": "b545441d-a946-43b2-8df0-419e541b2fa3",
+    "Name": {
+      "ja": "IGRいわて銀河鉄道",
+      "en": "IGR Iwate Galaxy Railway",
+      "ko": "IGR 이와테 은하철도",
+      "zh": "IGR岩手银河铁道"
+    },
+    "Link": "http://www.igr.jp/",
+    "Arias": [
+      "IGRいわて銀河鉄道",
+      "アイジーアールイワテギンガテツドウ",
+      "IGRいわて銀河鉄道株式会社",
+      "IGRいわて銀河鉄道",
+      "107"
+    ]
+  },
+  {
+    "SOPID": "e6beb11a-71a4-4eb4-b02f-cc3fc2d5fbd0",
+    "Name": {
+      "ja": "青い森鉄道",
+      "en": "Aoimori Railway",
+      "ko": "푸른 숲 철도",
+      "zh": "青森铁道"
+    },
+    "Link": "http://aoimorirailway.com/",
+    "Arias": [
+      "青い森鉄道",
+      "アオイモリテツドウ",
+      "青い森鉄道株式会社",
+      "青い森鉄道",
+      "108"
+    ]
+  },
+  {
+    "SOPID": "e32154f0-f8fe-4455-af94-6cc8e68da8b5",
+    "Name": {
+      "ja": "三陸鉄道",
+      "en": "Sanriku Railway",
+      "ko": "산리쿠 철도",
+      "zh": "三陆铁道"
+    },
+    "Link": "http://www.sanrikutetsudou.com/",
+    "Arias": [
+      "三陸鉄道",
+      "サンリクテツドウ",
+      "三陸鉄道株式会社",
+      "三鉄",
+      "109"
+    ]
+  },
+  {
+    "SOPID": "8b065baa-9c20-4a7f-b4bc-812bf9eefe6b",
+    "Name": {
+      "ja": "秋田内陸縦貫鉄道",
+      "en": "Akita Nairiku Jukan Railway",
+      "ko": "아키타 내륙 종관 철도",
+      "zh": "秋田内陆纵贯铁道"
+    },
+    "Link": "http://www.akita-nairiku.com/",
+    "Arias": [
+      "秋田内陸縦貫鉄道",
+      "アキタナイリクジュウカンテツドウ",
+      "秋田内陸縦貫鉄道株式会社",
+      "秋田内陸縦貫鉄道",
+      "110"
+    ]
+  },
+  {
+    "SOPID": "41241e8d-94a5-4dc5-86f9-79faf6d1005f",
+    "Name": {
+      "ja": "由利高原鉄道",
+      "en": "Yuri Kogen Railway",
+      "ko": "유리 고원 철도",
+      "zh": "由利高原铁道"
+    },
+    "Link": "http://www.obako5.com/",
+    "Arias": [
+      "由利高原鉄道",
+      "ユリコウゲンテツドウ",
+      "由利高原鉄道株式会社",
+      "由利高原鉄道",
+      "111"
+    ]
+  },
+  {
+    "SOPID": "0719ece8-f17e-4069-a742-88b2934b7700",
+    "Name": {
+      "ja": "山形鉄道",
+      "en": "Yamagata Railway",
+      "ko": "야마가타 철도",
+      "zh": "山形铁道"
+    },
+    "Link": "http://www.flower-liner.jp/",
+    "Arias": [
+      "山形鉄道",
+      "ヤマガタテツドウ",
+      "山形鉄道株式会社",
+      "山形鉄道",
+      "112"
+    ]
+  },
+  {
+    "SOPID": "1421e43a-0f8a-4874-9d50-5e28411ead86",
+    "Name": {
+      "ja": "くりはら田園鉄道",
+      "en": "Kurihara rural railway",
+      "ko": "쿠리하라 전원 철도",
+      "zh": "栗原乡村铁路"
+    },
+    "Link": "",
+    "Arias": [
+      "くりはら田園鉄道",
+      "クリハラデンエンテツドウ",
+      "くりはら田園鉄道株式会社",
+      "栗原電鉄",
+      "113"
+    ]
+  },
+  {
+    "SOPID": "ca519a10-5855-4a7a-bc62-d6f4b49f1324",
+    "Name": {
+      "ja": "阿武隈急行",
+      "en": "Abukuma Express",
+      "ko": "아부 쿠마 급행",
+      "zh": "阿武隈快车"
+    },
+    "Link": "http://www.abukyu.co.jp/",
+    "Arias": [
+      "阿武隈急行",
+      "アブクマキュウコウ",
+      "阿武隈急行株式会社",
+      "阿武急",
+      "114"
+    ]
+  },
+  {
+    "SOPID": "e87ba57a-d80b-48bd-8700-c277fcd1208b",
+    "Name": {
+      "ja": "仙台市交通局",
+      "en": "Sendai City Transportation Bureau",
+      "ko": "센다이시 교통국",
+      "zh": "仙台市交通局"
+    },
+    "Link": "http://www.kotsu.city.sendai.jp/",
+    "Arias": [
+      "仙台市交通局",
+      "センダイシコウツウキョク",
+      "仙台市交通局",
+      "仙台市交通局",
+      "115"
+    ]
+  },
+  {
+    "SOPID": "6fd3c151-5deb-404f-8ef3-7fad6ab73e3e",
+    "Name": {
+      "ja": "福島交通",
+      "en": "Fukushima Transportation",
+      "ko": "후쿠시마 교통",
+      "zh": "福岛交通"
+    },
+    "Link": "http://www.fukushima-koutu.co.jp/",
+    "Arias": [
+      "福島交通",
+      "フクシマコウツウ",
+      "福島交通株式会社",
+      "福島交通",
+      "116"
+    ]
+  },
+  {
+    "SOPID": "e6a71b43-f946-4938-a12e-3af4650ed817",
+    "Name": {
+      "ja": "会津鉄道",
+      "en": "Aizu Railway",
+      "ko": "아이즈 철도",
+      "zh": "会津铁道"
+    },
+    "Link": "http://www.aizutetsudo.jp/",
+    "Arias": [
+      "会津鉄道",
+      "アイヅテツドウ",
+      "会津鉄道株式会社",
+      "会津鉄道",
+      "117"
+    ]
+  },
+  {
+    "SOPID": "4dd46bf7-9427-44e4-94a1-d35f2bd2edad",
+    "Name": {
+      "ja": "宇都宮ライトレール",
+      "en": "Utsunomiya light rail",
+      "ko": "우츠노미야 라이트 레일",
+      "zh": "宇都宫轻轨"
+    },
+    "Link": "https://www.miyarail.co.jp/",
+    "Arias": [
+      "宇都宮ライトレール",
+      "ウツノミヤライトレール",
+      "宇都宮ライトレール株式会社",
+      "宇都宮ライトレール",
+      "250"
+    ]
+  },
+  {
+    "SOPID": "742e1822-8088-4cf2-a1b3-6bd8e5d1e293",
+    "Name": {
+      "ja": "仙台空港鉄道",
+      "en": "Sendai Airport Railway",
+      "ko": "센다이 공항 철도",
+      "zh": "仙台机场铁路"
+    },
+    "Link": "http://www.senat.co.jp/",
+    "Arias": [
+      "仙台空港鉄道",
+      "センダイクウコウテツドウ",
+      "仙台空港鉄道株式会社",
+      "仙台空港鉄道",
+      "118"
+    ]
+  },
+  {
+    "SOPID": "fa2e898b-8987-44a4-ac02-15276bb18715",
+    "Name": {
+      "ja": "東京都交通局",
+      "en": "Tokyo Metropolitan Bureau of Transportation",
+      "ko": "도쿄도 교통국",
+      "zh": "东京都交通局"
+    },
+    "Link": "http://www.kotsu.metro.tokyo.jp/",
+    "Arias": [
+      "東京都交通局",
+      "トウキョウトコウツウキョク",
+      "東京都交通局",
+      "東京都交通局",
+      "119"
+    ]
+  },
+  {
+    "SOPID": "ff24a005-dab1-4d79-bab7-8f2cdf395dae",
+    "Name": {
+      "ja": "秩父鉄道",
+      "en": "Chichibu Railway",
+      "ko": "치치부 철도",
+      "zh": "秩父铁道"
+    },
+    "Link": "http://www.chichibu-railway.co.jp/",
+    "Arias": [
+      "秩父鉄道",
+      "チチブテツドウ",
+      "秩父鉄道株式会社",
+      "秩鉄",
+      "120"
+    ]
+  },
+  {
+    "SOPID": "4e1981ab-1972-4ef5-983c-6a15d180dd7e",
+    "Name": {
+      "ja": "埼玉高速鉄道",
+      "en": "Saitama High Speed ​​Railway",
+      "ko": "사이타마 고속철도",
+      "zh": "埼玉高速铁道"
+    },
+    "Link": "http://www.s-rail.co.jp/",
+    "Arias": [
+      "埼玉高速鉄道",
+      "サイタマコウソクテツドウ",
+      "埼玉高速鉄道株式会社",
+      "埼玉高速鉄道",
+      "121"
+    ]
+  },
+  {
+    "SOPID": "4df8f0f8-aaf6-46fb-b184-f80395c5ea36",
+    "Name": {
+      "ja": "いすみ鉄道",
+      "en": "Isumi Railway",
+      "ko": "이스미 철도",
+      "zh": "夷隅铁道"
+    },
+    "Link": "http://www.isumirail.co.jp/",
+    "Arias": [
+      "いすみ鉄道",
+      "イスミテツドウ",
+      "いすみ鉄道株式会社",
+      "いすみ鉄道",
+      "122"
+    ]
+  },
+  {
+    "SOPID": "77779a3f-8cf4-4cf4-a3a5-d5a5a6b7e221",
+    "Name": {
+      "ja": "首都圏新都市鉄道",
+      "en": "Metropolitan area new urban railway",
+      "ko": "수도권 신도시 철도",
+      "zh": "首都圈新城铁"
+    },
+    "Link": "http://www.mir.co.jp/",
+    "Arias": [
+      "首都圏新都市鉄道",
+      "シュトケンシントシテツドウ",
+      "首都圏新都市鉄道株式会社",
+      "首都圏新都市鉄道",
+      "123"
+    ]
+  },
+  {
+    "SOPID": "6874a0b6-ec2e-4712-9be4-2e905e4a463f",
+    "Name": {
+      "ja": "横浜高速鉄道",
+      "en": "Yokohama Rapid Railway",
+      "ko": "요코하마 고속철도",
+      "zh": "横滨快速铁道"
+    },
+    "Link": "http://www.mm21railway.co.jp/",
+    "Arias": [
+      "横浜高速鉄道",
+      "ヨコハマコウソクテツドウ",
+      "横浜高速鉄道株式会社",
+      "横浜高速鉄道",
+      "124"
+    ]
+  },
+  {
+    "SOPID": "77a1c8d6-3082-4ebe-8ac9-66868b6b735a",
+    "Name": {
+      "ja": "ゆりかもめ",
+      "en": "Yurikamome",
+      "ko": "유리카모메",
+      "zh": "百合海鸥"
+    },
+    "Link": "http://www.yurikamome.co.jp/",
+    "Arias": [
+      "ゆりかもめ",
+      "ユリカモメ",
+      "株式会社ゆりかもめ",
+      "ゆりかもめ",
+      "125"
+    ]
+  },
+  {
+    "SOPID": "ea31246c-9cb6-41e8-9d8d-dcce0b69dc88",
+    "Name": {
+      "ja": "わたらせ渓谷鐵道",
+      "en": "Watarase Keikoku Railway",
+      "ko": "와타라세 계곡 철도",
+      "zh": "渡良濑溪国铁道"
+    },
+    "Link": "http://www.watetsu.com/",
+    "Arias": [
+      "わたらせ渓谷鐵道",
+      "ワタラセケイコクテツドウ",
+      "わたらせ渓谷鐵道株式会社",
+      "わたらせ渓谷鐵道",
+      "126"
+    ]
+  },
+  {
+    "SOPID": "4a930719-bc20-4e5f-b246-e21fef7f927a",
+    "Name": {
+      "ja": "山万",
+      "en": "Shanwan",
+      "ko": "산완",
+      "zh": "山万"
+    },
+    "Link": "http://www.yamaman.co.jp/",
+    "Arias": [
+      "山万",
+      "ヤママン",
+      "山万株式会社",
+      "山万",
+      "127"
+    ]
+  },
+  {
+    "SOPID": "176d5d01-f517-4305-9de3-34743c33782e",
+    "Name": {
+      "ja": "伊豆箱根鉄道",
+      "en": "Izu Hakone Railway",
+      "ko": "이즈 하코네 철도",
+      "zh": "伊豆箱根铁道"
+    },
+    "Link": "http://www.izuhakone.co.jp/",
+    "Arias": [
+      "伊豆箱根鉄道",
+      "イズハコネテツドウ",
+      "伊豆箱根鉄道株式会社",
+      "いずはこ",
+      "128"
+    ]
+  },
+  {
+    "SOPID": "89a2395e-6874-48cf-96f8-5728e4ab7e3c",
+    "Name": {
+      "ja": "ひたちなか海浜鉄道",
+      "en": "Hitachinaka Seaside Railway",
+      "ko": "히타치 나카 해변 철도",
+      "zh": "常陆那珂海滨铁道"
+    },
+    "Link": "http://www.hitachinaka-rail.co.jp/",
+    "Arias": [
+      "ひたちなか海浜鉄道",
+      "ヒタチナカカイヒンテツドウ",
+      "ひたちなか海浜鉄道株式会社",
+      "ひたちなか海浜鉄道",
+      "129"
+    ]
+  },
+  {
+    "SOPID": "a69fcca2-90de-4b08-9cf5-81096514b9a1",
+    "Name": {
+      "ja": "横浜市交通局",
+      "en": "Yokohama City Transportation Bureau",
+      "ko": "요코하마시 교통국",
+      "zh": "横滨市交通局"
+    },
+    "Link": "http://www.city.yokohama.lg.jp/koutuu/",
+    "Arias": [
+      "横浜市交通局",
+      "ヨコハマシコウツウキョク",
+      "横浜市交通局",
+      "横浜市交通局",
+      "130"
+    ]
+  },
+  {
+    "SOPID": "484e9bcd-9f48-4855-9aca-930ed65538aa",
+    "Name": {
+      "ja": "株式会社横浜シーサイドライン",
+      "en": "Yokohama Seaside Line Co., Ltd.",
+      "ko": "주식회사 요코하마 시사이드 라인",
+      "zh": "横滨海滨线有限公司"
+    },
+    "Link": "http://www.seasideline.co.jp/",
+    "Arias": [
+      "株式会社横浜シーサイドライン",
+      "ヨコハマシーサイドライン",
+      "株式会社横浜シーサイドライン",
+      "横浜シーサイドライン",
+      "131"
+    ]
+  },
+  {
+    "SOPID": "6f9ed1f9-e4fe-46fa-b027-3e6b9d11140c",
+    "Name": {
+      "ja": "関東鉄道",
+      "en": "Kanto Railway",
+      "ko": "간토 철도",
+      "zh": "关东铁道"
+    },
+    "Link": "http://www.kantetsu.co.jp/",
+    "Arias": [
+      "関東鉄道",
+      "カントウテツドウ",
+      "関東鉄道株式会社",
+      "関鉄",
+      "132"
+    ]
+  },
+  {
+    "SOPID": "c3a472c3-bf77-47ff-8a4a-487aadec20f6",
+    "Name": {
+      "ja": "江ノ島電鉄",
+      "en": "Enoshima Electric Railway",
+      "ko": "에노시마 전철",
+      "zh": "江之岛电铁"
+    },
+    "Link": "http://www.enoden.co.jp/",
+    "Arias": [
+      "江ノ島電鉄",
+      "エノシマデンテツ",
+      "江ノ島電鉄株式会社",
+      "江ノ電",
+      "133"
+    ]
+  },
+  {
+    "SOPID": "2774ad50-8d37-4a0d-8e14-c4896ddaf498",
+    "Name": {
+      "ja": "埼玉新都市交通",
+      "en": "Saitama new city transportation",
+      "ko": "사이타마 신도시 교통",
+      "zh": "埼玉新都市交通"
+    },
+    "Link": "http://www5.ocn.ne.jp/~snut/",
+    "Arias": [
+      "埼玉新都市交通",
+      "サイタマシントシコウツウ",
+      "埼玉新都市交通株式会社",
+      "埼玉新都市交通",
+      "134"
+    ]
+  },
+  {
+    "SOPID": "560d0329-9c3b-4787-b392-69cabc83ef89",
+    "Name": {
+      "ja": "鹿島鉄道",
+      "en": "Kashima Railway",
+      "ko": "가시마 철도",
+      "zh": "鹿岛铁道"
+    },
+    "Link": "http://www.kantetsu.co.jp/katetsu/",
+    "Arias": [
+      "鹿島鉄道",
+      "カシマテツドウ",
+      "鹿島鉄道株式会社",
+      "鹿鉄",
+      "135"
+    ]
+  },
+  {
+    "SOPID": "cf2bc600-45cd-4b6d-8433-b6d65a56f902",
+    "Name": {
+      "ja": "鹿島臨海鉄道",
+      "en": "Kashima Rinkai Railway",
+      "ko": "가시마 임해철도",
+      "zh": "鹿岛临海铁道"
+    },
+    "Link": "http://www.rintetsu.co.jp/",
+    "Arias": [
+      "鹿島臨海鉄道",
+      "カシマリンカイテツドウ",
+      "鹿島臨海鉄道株式会社",
+      "鹿島臨海鉄道",
+      "136"
+    ]
+  },
+  {
+    "SOPID": "0f9415e9-f323-4452-a5da-d45c8b648e31",
+    "Name": {
+      "ja": "芝山鉄道",
+      "en": "Shibayama Railway",
+      "ko": "시바야마 철도",
+      "zh": "芝山铁道"
+    },
+    "Link": "http://www.sibatetu.co.jp/",
+    "Arias": [
+      "芝山鉄道",
+      "シバヤマテツドウ",
+      "芝山鉄道株式会社",
+      "芝山鉄道",
+      "137"
+    ]
+  },
+  {
+    "SOPID": "4d1bb965-a2e5-49ea-adbe-3ae4d407479c",
+    "Name": {
+      "ja": "小湊鐵道",
+      "en": "Kominato Railway",
+      "ko": "코미나토 철도",
+      "zh": "小凑铁道"
+    },
+    "Link": "http://www.kominato.co.jp/",
+    "Arias": [
+      "小湊鐵道",
+      "コミナトテツドウ",
+      "小湊鐵道株式会社",
+      "小湊鐵道",
+      "138"
+    ]
+  },
+  {
+    "SOPID": "0dd9b980-e1ae-46bb-a8c7-9526b2d9ecf5",
+    "Name": {
+      "ja": "湘南モノレール",
+      "en": "Shonan Monorail",
+      "ko": "쇼난 모노레일",
+      "zh": "湘南单轨电车"
+    },
+    "Link": "http://www.shonan-monorail.co.jp/",
+    "Arias": [
+      "湘南モノレール",
+      "ショウナンモノレール",
+      "湘南モノレール株式会社",
+      "湘南モノレール",
+      "139"
+    ]
+  },
+  {
+    "SOPID": "18826d32-1079-4953-af0b-7feeb5e8cde9",
+    "Name": {
+      "ja": "上信電鉄",
+      "en": "Joshin Electric Railway",
+      "ko": "가미신 전철",
+      "zh": "上信电铁"
+    },
+    "Link": "http://www.joshin-dentetsu.co.jp/",
+    "Arias": [
+      "上信電鉄",
+      "ジョウシンデンテツ",
+      "上信電鉄株式会社",
+      "上信電鉄",
+      "140"
+    ]
+  },
+  {
+    "SOPID": "8f8b5f95-db1b-4310-a4f7-23f05ab30d72",
+    "Name": {
+      "ja": "上毛電気鉄道",
+      "en": "Jomo Electric Railway",
+      "ko": "상모 전기 철도",
+      "zh": "上毛电铁"
+    },
+    "Link": "http://www.jomorailway.com/",
+    "Arias": [
+      "上毛電気鉄道",
+      "ジョウモウデンキテツドウ",
+      "上毛電気鉄道株式会社",
+      "上電",
+      "141"
+    ]
+  },
+  {
+    "SOPID": "f7daffaf-4cf5-4b12-95b9-9bc1ce022aef",
+    "Name": {
+      "ja": "新京成電鉄",
+      "en": "Shinkeisei Electric Railway",
+      "ko": "신쿄 세이 전철",
+      "zh": "新京成电铁"
+    },
+    "Link": "http://www.shinkeisei.co.jp/",
+    "Arias": [
+      "新京成電鉄",
+      "シンケイセイデンテツ",
+      "新京成電鉄株式会社",
+      "新京成電鉄",
+      "142"
+    ]
+  },
+  {
+    "SOPID": "021c5479-8831-4c0a-a150-3e13d7f28b8b",
+    "Name": {
+      "ja": "真岡鐵道",
+      "en": "Moka Railway",
+      "ko": "마오카 철도",
+      "zh": "真冈铁道"
+    },
+    "Link": "http://www.moka-railway.co.jp/",
+    "Arias": [
+      "真岡鐵道",
+      "モオカテツドウ",
+      "真岡鐵道株式会社",
+      "真岡鐵道",
+      "143"
+    ]
+  },
+  {
+    "SOPID": "5d4239e8-c1d4-4469-9d30-489fc7e446d2",
+    "Name": {
+      "ja": "千葉都市モノレール",
+      "en": "Chiba Urban Monorail",
+      "ko": "지바 도시 모노레일",
+      "zh": "千叶都市单轨电车"
+    },
+    "Link": "http://www.chiba-monorail.co.jp/",
+    "Arias": [
+      "千葉都市モノレール",
+      "チバトシモノレール",
+      "千葉都市モノレール株式会社",
+      "千葉モノレール",
+      "144"
+    ]
+  },
+  {
+    "SOPID": "31b96c2c-8223-423e-8768-f296389744e6",
+    "Name": {
+      "ja": "流鉄",
+      "en": "Ryūtetsu",
+      "ko": "유철",
+      "zh": "龙铁"
+    },
+    "Link": "http://www.kanko.chuo.chiba.jp/kanko/3297/",
+    "Arias": [
+      "流鉄",
+      "リュウテツ",
+      "流鉄株式会社",
+      "流鉄",
+      "145"
+    ]
+  },
+  {
+    "SOPID": "f3e51a2f-8469-4e43-a785-83116570d0d9",
+    "Name": {
+      "ja": "多摩都市モノレール",
+      "en": "Tama Urban Monorail",
+      "ko": "타마시 모노레일",
+      "zh": "多摩都市单轨电车"
+    },
+    "Link": "http://www.tama-monorail.co.jp/",
+    "Arias": [
+      "多摩都市モノレール",
+      "タマトシモノレール",
+      "多摩都市モノレール株式会社",
+      "多摩モノレール",
+      "146"
+    ]
+  },
+  {
+    "SOPID": "3eaa3a64-c0b5-409f-baa7-21ee770e885f",
+    "Name": {
+      "ja": "銚子電気鉄道",
+      "en": "Choshi Electric Railway",
+      "ko": "초코 전기 철도",
+      "zh": "铫子电铁"
+    },
+    "Link": "http://www.choshi-dentetsu.jp/",
+    "Arias": [
+      "銚子電気鉄道",
+      "チョウシデンキテツドウ",
+      "銚子電気鉄道株式会社",
+      "銚子電鉄",
+      "147"
+    ]
+  },
+  {
+    "SOPID": "a1faa157-8671-43e8-ab84-ef6a2c24109f",
+    "Name": {
+      "ja": "東京モノレール",
+      "en": "tokyo monorail",
+      "ko": "도쿄 모노레일",
+      "zh": "东京单轨电车"
+    },
+    "Link": "http://www.tokyo-monorail.co.jp/",
+    "Arias": [
+      "東京モノレール",
+      "トウキョウモノレール",
+      "東京モノレール株式会社",
+      "東京モノレール",
+      "148"
+    ]
+  },
+  {
+    "SOPID": "6ef0a15a-1a62-475f-9e5c-001f82d19217",
+    "Name": {
+      "ja": "東京臨海高速鉄道",
+      "en": "Tokyo waterfront high-speed railway",
+      "ko": "도쿄 임해 고속철도",
+      "zh": "东京临海高速铁路"
+    },
+    "Link": "http://www.twr.co.jp/",
+    "Arias": [
+      "東京臨海高速鉄道",
+      "トウキョウリンカイコウソクテツドウ",
+      "東京臨海高速鉄道株式会社",
+      "東京臨海高速鉄道",
+      "149"
+    ]
+  },
+  {
+    "SOPID": "2670cb3d-33b1-4ff1-9fb0-560c22065c67",
+    "Name": {
+      "ja": "東葉高速鉄道",
+      "en": "Toyo Rapid Railway",
+      "ko": "히가시바 고속철도",
+      "zh": "东洋高速铁道"
+    },
+    "Link": "http://www.toyokosoku.co.jp/",
+    "Arias": [
+      "東葉高速鉄道",
+      "トウヨウコウソクテツドウ",
+      "東葉高速鉄道株式会社",
+      "東葉高速鉄道",
+      "150"
+    ]
+  },
+  {
+    "SOPID": "018d4676-6043-4f3e-beea-f558e674c127",
+    "Name": {
+      "ja": "箱根登山鉄道",
+      "en": "Hakone Tozan Railway",
+      "ko": "하코네 등산 철도",
+      "zh": "箱根登山铁道"
+    },
+    "Link": "http://www.hakone-tozan.co.jp/",
+    "Arias": [
+      "箱根登山鉄道",
+      "ハコネトザンテツドウ",
+      "箱根登山鉄道株式会社",
+      "箱根登山鉄道",
+      "151"
+    ]
+  },
+  {
+    "SOPID": "e5c6bf60-10b2-4190-8706-d3f397672508",
+    "Name": {
+      "ja": "北総鉄道",
+      "en": "Hokuso Railway",
+      "ko": "기타소 철도",
+      "zh": "北总铁道"
+    },
+    "Link": "http://www.hokuso-railway.co.jp/",
+    "Arias": [
+      "北総鉄道",
+      "ホクソウテツドウ",
+      "北総鉄道株式会社",
+      "北総鉄道",
+      "152"
+    ]
+  },
+  {
+    "SOPID": "0faa31d7-6dbb-418c-9654-61e83f91cd8a",
+    "Name": {
+      "ja": "野岩鉄道",
+      "en": "Noiwa Railway",
+      "ko": "노이와 철도",
+      "zh": "大岩铁道"
+    },
+    "Link": "http://www.yagan.co.jp/",
+    "Arias": [
+      "野岩鉄道",
+      "ヤガンテツドウ",
+      "野岩鉄道株式会社",
+      "野岩鉄道",
+      "153"
+    ]
+  },
+  {
+    "SOPID": "ba0eed4c-8040-4331-9806-62f500045a8a",
+    "Name": {
+      "ja": "富士山麓電気鉄道",
+      "en": "Fuji Foothills Electric Railway",
+      "ko": "후지산 기슭 전기철도",
+      "zh": "富士山麓电铁"
+    },
+    "Link": "http://www.fujikyu.co.jp/",
+    "Arias": [
+      "富士山麓電気鉄道",
+      "フジサンロクデンキテツドウ",
+      "富士山麓電気鉄道株式会社",
+      "富士急",
+      "154"
+    ]
+  },
+  {
+    "SOPID": "99c4fca2-1c33-4a64-a0b4-6a39b32c165e",
+    "Name": {
+      "ja": "北越急行",
+      "en": "Hokuetsu Express",
+      "ko": "기타코츠 급행",
+      "zh": "北越急行"
+    },
+    "Link": "http://www.hokuhoku.co.jp/",
+    "Arias": [
+      "北越急行",
+      "ホクエツキュウコウ",
+      "北越急行株式会社",
+      "北越急行",
+      "155"
+    ]
+  },
+  {
+    "SOPID": "9dc578dc-ec45-479a-b156-0ad010011104",
+    "Name": {
+      "ja": "しなの鉄道",
+      "en": "Shinano Railway",
+      "ko": "시나노 철도",
+      "zh": "信浓铁道"
+    },
+    "Link": "http://www.shinanorailway.co.jp/",
+    "Arias": [
+      "しなの鉄道",
+      "シナノテツドウ",
+      "しなの鉄道株式会社",
+      "しな鉄",
+      "156"
+    ]
+  },
+  {
+    "SOPID": "efc532e0-26d7-43b6-bd83-26c1b56f1aaa",
+    "Name": {
+      "ja": "上田交通",
+      "en": "Ueda Transportation",
+      "ko": "우에다 교통",
+      "zh": "上田交通"
+    },
+    "Link": "http://www.ukg.co.jp/",
+    "Arias": [
+      "上田交通",
+      "ウエダコウツウ",
+      "上田交通株式会社",
+      "上交",
+      "157"
+    ]
+  },
+  {
+    "SOPID": "a086f4bb-cbe9-4230-bdbe-cfe3b48698c6",
+    "Name": {
+      "ja": "長野電鉄",
+      "en": "Nagano Electric Railway",
+      "ko": "나가노 전철",
+      "zh": "长野电铁"
+    },
+    "Link": "http://www.nagaden-net.co.jp/",
+    "Arias": [
+      "長野電鉄",
+      "ナガノデンテツ",
+      "長野電鉄株式会社",
+      "長電",
+      "158"
+    ]
+  },
+  {
+    "SOPID": "bb7fbd71-0f53-4548-bc47-b205074978d4",
+    "Name": {
+      "ja": "アルピコ交通",
+      "en": "alpico transportation",
+      "ko": "알피코 교통",
+      "zh": "阿尔皮科运输"
+    },
+    "Link": "http://www.alpico.co.jp/traffic/",
+    "Arias": [
+      "アルピコ交通",
+      "アルピココウツウ",
+      "アルピコ交通株式会社",
+      "アルピコ交通",
+      "159"
+    ]
+  },
+  {
+    "SOPID": "d0640989-5dac-465a-8147-fa4ca20a81c5",
+    "Name": {
+      "ja": "富山地方鉄道",
+      "en": "Toyama Regional Railway",
+      "ko": "도야마 지방 철도",
+      "zh": "富山地方铁路"
+    },
+    "Link": "http://www.chitetsu.co.jp/",
+    "Arias": [
+      "富山地方鉄道",
+      "トヤマチホウテツドウ",
+      "富山地方鉄道株式会社",
+      "富山地鉄",
+      "160"
+    ]
+  },
+  {
+    "SOPID": "67e95ac8-9d60-4b6d-9199-a9bc100a88b2",
+    "Name": {
+      "ja": "神岡鉄道",
+      "en": "Kamioka Railway",
+      "ko": "가미오카 철도",
+      "zh": "神冈铁道"
+    },
+    "Link": "",
+    "Arias": [
+      "神岡鉄道",
+      "カミオカテツドウ",
+      "神岡鉄道株式会社",
+      "神鉄",
+      "161"
+    ]
+  },
+  {
+    "SOPID": "a4be682b-9338-48db-8835-49c1e3d5f84c",
+    "Name": {
+      "ja": "万葉線",
+      "en": "Manyo Line",
+      "ko": "만엽선",
+      "zh": "万叶线"
+    },
+    "Link": "http://www1.coralnet.or.jp/manyosen/",
+    "Arias": [
+      "万葉線",
+      "マンヨウセン",
+      "万葉線株式会社",
+      "万葉線",
+      "163"
+    ]
+  },
+  {
+    "SOPID": "5fdfca45-4019-4bbe-bf9a-56be79af4a79",
+    "Name": {
+      "ja": "黒部峡谷鉄道",
+      "en": "Kurobe Gorge Railway",
+      "ko": "구로베 협곡 철도",
+      "zh": "黑部峡谷铁道"
+    },
+    "Link": "http://www.kurotetu.co.jp/",
+    "Arias": [
+      "黒部峡谷鉄道",
+      "クロベキョウコクテツドウ",
+      "黒部峡谷鉄道株式会社",
+      "黒鉄",
+      "162"
+    ]
+  },
+  {
+    "SOPID": "25e2e1d5-a5cd-4212-9bc5-3130dbbee02e",
+    "Name": {
+      "ja": "富山ライトレール",
+      "en": "Toyama Light Rail",
+      "ko": "도야마 라이트 레일",
+      "zh": "富山轻轨"
+    },
+    "Link": "http://www.t-lr.co.jp/",
+    "Arias": [
+      "富山ライトレール",
+      "トヤマライトレール",
+      "富山ライトレール株式会社",
+      "富山ライトレール",
+      "164"
+    ]
+  },
+  {
+    "SOPID": "08291cec-0c99-490d-a2a3-67a36bd710bf",
+    "Name": {
+      "ja": "北陸鉄道",
+      "en": "Hokuriku Railway",
+      "ko": "호쿠리쿠 철도",
+      "zh": "北陆铁道"
+    },
+    "Link": "http://www.hokutetsu.co.jp/",
+    "Arias": [
+      "北陸鉄道",
+      "ホクリクテツドウ",
+      "北陸鉄道株式会社",
+      "北鉄",
+      "165"
+    ]
+  },
+  {
+    "SOPID": "a4f4d082-4390-4130-888f-a734f5c2035c",
+    "Name": {
+      "ja": "えちごトキめき鉄道",
+      "en": "Echigo Tokimeki Railway",
+      "ko": "에치고 토키 메키 철도",
+      "zh": "越后心跳铁道"
+    },
+    "Link": "https://www.echigo-tokimeki.co.jp/",
+    "Arias": [
+      "えちごトキめき鉄道",
+      "エチゴトキメキテツドウ",
+      "えちごトキめき鉄道株式会社",
+      "トキてつ",
+      "244"
+    ]
+  },
+  {
+    "SOPID": "b5f2c3ba-e5ca-4957-88aa-9d199e175c0a",
+    "Name": {
+      "ja": "あいの風とやま鉄道",
+      "en": "Ainokaze Toyama Railway",
+      "ko": "아이노 바람과 야마 철도",
+      "zh": "爱之风富山铁道"
+    },
+    "Link": "http://ainokaze.co.jp/",
+    "Arias": [
+      "あいの風とやま鉄道",
+      "アイノカゼトヤマテツドウ",
+      "あいの風とやま鉄道株式会社",
+      "あいてつ",
+      "245"
+    ]
+  },
+  {
+    "SOPID": "75df75aa-66d4-4419-94b4-d60ac33c016c",
+    "Name": {
+      "ja": "IRいしかわ鉄道",
+      "en": "IR Ishikawa Railway",
+      "ko": "IR 이시카와 철도",
+      "zh": "IR石川铁道"
+    },
+    "Link": "http://www.ishikawa-railway.jp",
+    "Arias": [
+      "IRいしかわ鉄道",
+      "アイアールイシカワテツドウ",
+      "IRいしかわ鉄道株式会社",
+      "いしてつ",
+      "246"
+    ]
+  },
+  {
+    "SOPID": "1c2183bc-dd32-4817-b7fc-3a0d8dfc8610",
+    "Name": {
+      "ja": "のと鉄道",
+      "en": "Noto Railway",
+      "ko": "노토 철도",
+      "zh": "能登铁道"
+    },
+    "Link": "http://www.incl.ne.jp/ntr/",
+    "Arias": [
+      "のと鉄道",
+      "ノトテツ",
+      "のと鉄道株式会社",
+      "のと鉄",
+      "166"
+    ]
+  },
+  {
+    "SOPID": "e2cc46ba-2533-4628-9224-a61f3ba40222",
+    "Name": {
+      "ja": "えちぜん鉄道",
+      "en": "Echizen Railway",
+      "ko": "에치젠 철도",
+      "zh": "越前铁道"
+    },
+    "Link": "http://www.echizen-tetudo.co.jp/",
+    "Arias": [
+      "えちぜん鉄道",
+      "エチゼンテツドウ",
+      "えちぜん鉄道株式会社",
+      "えち鉄",
+      "167"
+    ]
+  },
+  {
+    "SOPID": "28017cb3-d54d-4f45-a4a4-a974ec11e542",
+    "Name": {
+      "ja": "福井鉄道",
+      "en": "Fukui Railway",
+      "ko": "후쿠이 철도",
+      "zh": "福井铁道"
+    },
+    "Link": "http://www.fukutetsu.jp/",
+    "Arias": [
+      "福井鉄道",
+      "フクイテツドウ",
+      "福井鉄道株式会社",
+      "福鉄",
+      "168"
+    ]
+  },
+  {
+    "SOPID": "71774b2c-ccfa-4c8e-afec-c0adac7f1cbd",
+    "Name": {
+      "ja": "伊豆急行",
+      "en": "Izukyu",
+      "ko": "이즈 급행",
+      "zh": "伊豆急"
+    },
+    "Link": "http://www.izukyu.co.jp/",
+    "Arias": [
+      "伊豆急行",
+      "イズキュウコウ",
+      "伊豆急行株式会社",
+      "伊豆急",
+      "169"
+    ]
+  },
+  {
+    "SOPID": "2bef4a29-80f2-4460-a898-ff9c6c783204",
+    "Name": {
+      "ja": "岳南鉄道",
+      "en": "Gakunan Railway",
+      "ko": "다케난 철도",
+      "zh": "岳南铁道"
+    },
+    "Link": "http://www.fujikyu.co.jp/gakunan/",
+    "Arias": [
+      "岳南鉄道",
+      "ガクナンテツドウ",
+      "岳南鉄道株式会社",
+      "岳南鉄道",
+      "170"
+    ]
+  },
+  {
+    "SOPID": "c5c7cd0e-daeb-43dc-9f25-d3139bd0836b",
+    "Name": {
+      "ja": "静岡鉄道",
+      "en": "Shizuoka Railway",
+      "ko": "시즈오카 철도",
+      "zh": "静冈铁道"
+    },
+    "Link": "http://www.shizutetsu.co.jp/",
+    "Arias": [
+      "静岡鉄道",
+      "シズオカテツドウ",
+      "静岡鉄道株式会社",
+      "静鉄",
+      "171"
+    ]
+  },
+  {
+    "SOPID": "1ea49823-a632-4764-92f9-efb4fe1dc206",
+    "Name": {
+      "ja": "天竜浜名湖鉄道",
+      "en": "Tenryu Hamanako Railway",
+      "ko": "텐류하마 나코 철도",
+      "zh": "天龙滨名湖铁道"
+    },
+    "Link": "http://www.tenhama.co.jp/",
+    "Arias": [
+      "天竜浜名湖鉄道",
+      "テンリュウハマナコテツドウ",
+      "天竜浜名湖鉄道株式会社",
+      "天竜浜名湖鉄道",
+      "172"
+    ]
+  },
+  {
+    "SOPID": "d90a1b11-f279-417a-a640-20f75fdb858e",
+    "Name": {
+      "ja": "遠州鉄道",
+      "en": "Enshu Railway",
+      "ko": "원주철도",
+      "zh": "远州铁路"
+    },
+    "Link": "http://www.entetsu.co.jp/",
+    "Arias": [
+      "遠州鉄道",
+      "エンシュウテツドウ",
+      "遠州鉄道株式会社",
+      "遠鉄",
+      "173"
+    ]
+  },
+  {
+    "SOPID": "a374e006-ec37-4d36-8afd-386d6e3290b3",
+    "Name": {
+      "ja": "大井川鐵道",
+      "en": "Oigawa Railway",
+      "ko": "오이가와 철도",
+      "zh": "大井川铁道"
+    },
+    "Link": "http://www.oigawa-railway.co.jp/",
+    "Arias": [
+      "大井川鐵道",
+      "オオイガワテツドウ",
+      "大井川鐵道株式会社",
+      "大鐵",
+      "174"
+    ]
+  },
+  {
+    "SOPID": "0da54761-91b3-45b3-86a1-281dbbef6a16",
+    "Name": {
+      "ja": "名古屋臨海高速鉄道",
+      "en": "Nagoya Waterfront Rapid Railway",
+      "ko": "나고야 임해 고속철도",
+      "zh": "名古屋临海高速铁路"
+    },
+    "Link": "http://www.aonamiline.co.jp/",
+    "Arias": [
+      "名古屋臨海高速鉄道",
+      "ナゴヤリンカイコウソクテツドウ",
+      "名古屋臨海高速鉄道株式会社",
+      "名臨高",
+      "175"
+    ]
+  },
+  {
+    "SOPID": "bd59a688-ccdb-4046-9cf6-3baaa9c93712",
+    "Name": {
+      "ja": "東海交通事業",
+      "en": "Tokai Transportation Business",
+      "ko": "도카이 교통 사업",
+      "zh": "东海交通事业"
+    },
+    "Link": "http://www.tkj-i.co.jp/",
+    "Arias": [
+      "東海交通事業",
+      "トウカイコウツウジギョウ",
+      "株式会社東海交通事業",
+      "東海交通事業",
+      "176"
+    ]
+  },
+  {
+    "SOPID": "f340c77d-dc4b-4bc9-bf7b-2194a66f1270",
+    "Name": {
+      "ja": "愛知環状鉄道",
+      "en": "Aichi Loop Railway",
+      "ko": "아이치 환상 철도",
+      "zh": "爱知环状铁道"
+    },
+    "Link": "http://www.aikanrailway.co.jp/",
+    "Arias": [
+      "愛知環状鉄道",
+      "アイチカンジョウテツドウ",
+      "愛知環状鉄道株式会社",
+      "愛環",
+      "177"
+    ]
+  },
+  {
+    "SOPID": "8750dbb9-bf36-4ba6-bedf-8c89e82b26ec",
+    "Name": {
+      "ja": "愛知高速交通",
+      "en": "Aichi Rapid Transit",
+      "ko": "아이치 고속 교통",
+      "zh": "爱知高速交通"
+    },
+    "Link": "http://www.linimo.jp/",
+    "Arias": [
+      "愛知高速交通",
+      "アイチコウソクコウツウ",
+      "愛知高速交通株式会社",
+      "愛知高速交通",
+      "178"
+    ]
+  },
+  {
+    "SOPID": "2f27f1b3-01af-4260-9ce3-037ab5479ff5",
+    "Name": {
+      "ja": "名古屋市交通局",
+      "en": "Nagoya City Transportation Bureau",
+      "ko": "나고야시 교통국",
+      "zh": "名古屋市交通局"
+    },
+    "Link": "http://www.kotsu.city.nagoya.jp/",
+    "Arias": [
+      "名古屋市交通局",
+      "ナゴヤシコウツウキョク",
+      "名古屋市交通局",
+      "名古屋市交通局",
+      "179"
+    ]
+  },
+  {
+    "SOPID": "4d3b4a1d-195d-4df8-9b56-b85eece0865c",
+    "Name": {
+      "ja": "桃花台新交通",
+      "en": "Taohuatai New Transportation",
+      "ko": "도화타이 신교통",
+      "zh": "桃花台新交通"
+    },
+    "Link": "",
+    "Arias": [
+      "桃花台新交通",
+      "トウカダイシンコウツウ",
+      "桃花台新交通株式会社",
+      "桃花台新交通",
+      "180"
+    ]
+  },
+  {
+    "SOPID": "31c83cb8-4445-4c7a-9b3b-cf14c2d363d2",
+    "Name": {
+      "ja": "豊橋鉄道",
+      "en": "Toyohashi Railway",
+      "ko": "도요하시 철도",
+      "zh": "丰桥铁道"
+    },
+    "Link": "http://www.toyotetsu.com/",
+    "Arias": [
+      "豊橋鉄道",
+      "トヨハシテツドウ",
+      "豊橋鉄道株式会社",
+      "豊鉄",
+      "181"
+    ]
+  },
+  {
+    "SOPID": "c0293757-f5c3-4f7f-a347-8d7ca3f1cf0d",
+    "Name": {
+      "ja": "名古屋ガイドウェイバス",
+      "en": "Nagoya Guideway Bus",
+      "ko": "나고야 가이드웨이 버스",
+      "zh": "名古屋导轨巴士"
+    },
+    "Link": "http://www.guideway.co.jp/",
+    "Arias": [
+      "名古屋ガイドウェイバス",
+      "ナゴヤガイドウェイバス",
+      "名古屋ガイドウェイバス株式会社",
+      "名古屋ガイドウェイバス",
+      "182"
+    ]
+  },
+  {
+    "SOPID": "7b34d9d6-59f6-4c87-9862-04ed879000c8",
+    "Name": {
+      "ja": "明知鉄道",
+      "en": "Akechi Railway",
+      "ko": "메이지 철도",
+      "zh": "明智铁道"
+    },
+    "Link": "http://www.aketetsu.co.jp/",
+    "Arias": [
+      "明知鉄道",
+      "アケチテツドウ",
+      "明知鉄道株式会社",
+      "明知鉄道",
+      "183"
+    ]
+  },
+  {
+    "SOPID": "00affcd7-7194-4e86-a299-d014b7f62e0b",
+    "Name": {
+      "ja": "長良川鉄道",
+      "en": "Nagaragawa Railway",
+      "ko": "나가라가와 철도",
+      "zh": "长良川铁道"
+    },
+    "Link": "http://www.nagatetsu.co.jp/",
+    "Arias": [
+      "長良川鉄道",
+      "ナガラガワテツドウ",
+      "長良川鉄道株式会社",
+      "長鉄",
+      "184"
+    ]
+  },
+  {
+    "SOPID": "66e9f78e-44d7-491d-b0f9-a6872b44a9b6",
+    "Name": {
+      "ja": "樽見鉄道",
+      "en": "Tarumi Railway",
+      "ko": "타루미 철도",
+      "zh": "垂水铁道"
+    },
+    "Link": "http://tarumi-railway.com/",
+    "Arias": [
+      "樽見鉄道",
+      "タルミテツドウ",
+      "樽見鉄道株式会社",
+      "樽鉄",
+      "185"
+    ]
+  },
+  {
+    "SOPID": "14b5e14f-1b3b-4ff3-a6cb-00973b9e150c",
+    "Name": {
+      "ja": "三岐鉄道",
+      "en": "Sangi Railway",
+      "ko": "미키 철도",
+      "zh": "桑吉铁路"
+    },
+    "Link": "http://www.sangirail.co.jp/",
+    "Arias": [
+      "三岐鉄道",
+      "サンギテツドウ",
+      "三岐鉄道株式会社",
+      "三岐鉄道",
+      "186"
+    ]
+  },
+  {
+    "SOPID": "13828ccb-001f-441d-8126-58428afe40d5",
+    "Name": {
+      "ja": "伊勢鉄道",
+      "en": "Ise Railway",
+      "ko": "이세 철도",
+      "zh": "伊势铁道"
+    },
+    "Link": "http://www.isetetu.co.jp/",
+    "Arias": [
+      "伊勢鉄道",
+      "イセテツドウ",
+      "伊勢鉄道株式会社",
+      "伊勢鉄道",
+      "187"
+    ]
+  },
+  {
+    "SOPID": "878bc9d4-1949-44c1-bfcd-c1034bae372f",
+    "Name": {
+      "ja": "伊賀鉄道",
+      "en": "Iga Railway",
+      "ko": "이가 철도",
+      "zh": "伊贺铁道"
+    },
+    "Link": "http://www.igatetsu.co.jp/",
+    "Arias": [
+      "伊賀鉄道",
+      "イガテツドウ",
+      "伊賀鉄道株式会社",
+      "伊賀鉄道",
+      "188"
+    ]
+  },
+  {
+    "SOPID": "d12581bf-40ec-4d18-a48a-85c393766981",
+    "Name": {
+      "ja": "養老鉄道",
+      "en": "Yoro Railway",
+      "ko": "양로 철도",
+      "zh": "养老铁道"
+    },
+    "Link": "http://www.yororailway.co.jp/",
+    "Arias": [
+      "養老鉄道",
+      "ヨウロウテツドウ",
+      "養老鉄道株式会社",
+      "養老鉄道",
+      "189"
+    ]
+  },
+  {
+    "SOPID": "6adad363-07d7-47a3-b03f-fbc84bd1bdd5",
+    "Name": {
+      "ja": "四日市あすなろう鉄道",
+      "en": "Yokkaichi Asunarou Railway",
+      "ko": "욧카이치 아스나로 철도",
+      "zh": "四日市阿苏纳楼铁道"
+    },
+    "Link": "",
+    "Arias": [
+      "四日市あすなろう鉄道",
+      "ヨッカイチアスナロウテツドウ",
+      "四日市あすなろう鉄道株式会社",
+      "あすてつ",
+      "247"
+    ]
+  },
+  {
+    "SOPID": "7c79e281-077b-465c-8f8d-3370cd6b7a1e",
+    "Name": {
+      "ja": "近江鉄道",
+      "en": "Ohmi Railway",
+      "ko": "오미철도",
+      "zh": "近江铁道"
+    },
+    "Link": "http://www.ohmitetudo.co.jp/",
+    "Arias": [
+      "近江鉄道",
+      "オウミテツドウ",
+      "近江鉄道株式会社",
+      "近江鉄道",
+      "190"
+    ]
+  },
+  {
+    "SOPID": "ced35419-a612-417d-ad80-7272420bdc5d",
+    "Name": {
+      "ja": "信楽高原鐵道",
+      "en": "Shigaraki Kogen Railway",
+      "ko": "시부라쿠 고원 철도",
+      "zh": "信乐高原铁道"
+    },
+    "Link": "http://www.biwa.ne.jp/skr/",
+    "Arias": [
+      "信楽高原鐵道",
+      "シガラキコウゲンテツドウ",
+      "信楽高原鐵道株式会社",
+      "信楽高原鐵道",
+      "191"
+    ]
+  },
+  {
+    "SOPID": "6ef1318e-c9e5-45a6-bda6-37a046cf9e28",
+    "Name": {
+      "ja": "嵯峨野観光鉄道",
+      "en": "Sagano Scenic Railway",
+      "ko": "사가노 관광 철도",
+      "zh": "嵯峨野观光铁道"
+    },
+    "Link": "http://www.sagano-kanko.co.jp/",
+    "Arias": [
+      "嵯峨野観光鉄道",
+      "サガノカンコウテツドウ",
+      "嵯峨野観光鉄道株式会社",
+      "嵯峨野トロッコ",
+      "192"
+    ]
+  },
+  {
+    "SOPID": "39aab762-3403-444e-9d49-a84787b95780",
+    "Name": {
+      "ja": "叡山電鉄",
+      "en": "Eizan Electric Railway",
+      "ko": "가야마 전철",
+      "zh": "睿山电铁"
+    },
+    "Link": "http://eizandensha.co.jp/",
+    "Arias": [
+      "叡山電鉄",
+      "エイザンデンテツ",
+      "叡山電鉄株式会社",
+      "叡電",
+      "193"
+    ]
+  },
+  {
+    "SOPID": "a6a96ecd-e011-4120-9d71-829cfaed9a48",
+    "Name": {
+      "ja": "京都丹後鉄道",
+      "en": "Kyoto Tango Railway",
+      "ko": "교토탄고 철도",
+      "zh": "京都丹后铁道"
+    },
+    "Link": "http://travel.willer.co.jp/campaign/tantetsu/",
+    "Arias": [
+      "京都丹後鉄道",
+      "キョウトタンゴテツドウ",
+      "WILLER TRAINS株式会社",
+      "丹鉄",
+      "194"
+    ]
+  },
+  {
+    "SOPID": "c926d17b-d4da-4e56-9f40-17e268f3f718",
+    "Name": {
+      "ja": "京都市交通局",
+      "en": "Kyoto City Transportation Bureau",
+      "ko": "교토시 교통국",
+      "zh": "京都市交通局"
+    },
+    "Link": "http://www.city.kyoto.lg.jp/kotsu/",
+    "Arias": [
+      "京都市交通局",
+      "キョウトシコウツウキョク",
+      "京都市交通局",
+      "京都市交通局",
+      "195"
+    ]
+  },
+  {
+    "SOPID": "602e3b98-4018-4f93-9de5-f8d6b73fe877",
+    "Name": {
+      "ja": "京福電気鉄道",
+      "en": "Keifuku Electric Railway",
+      "ko": "경복전기철도",
+      "zh": "京福电铁"
+    },
+    "Link": "http://www.keifuku.co.jp/",
+    "Arias": [
+      "京福電気鉄道",
+      "ケイフクデンキテツドウ",
+      "京福電気鉄道株式会社",
+      "京福電気鉄道",
+      "196"
+    ]
+  },
+  {
+    "SOPID": "7d128fa4-e65d-42f5-9b70-fe9ee653ffe2",
+    "Name": {
+      "ja": "北大阪急行電鉄",
+      "en": "Kita-Osaka Kyuko Railway",
+      "ko": "기타 오사카 급행 전철",
+      "zh": "北大阪急行铁道"
+    },
+    "Link": "http://www.kita-kyu.co.jp/",
+    "Arias": [
+      "北大阪急行電鉄",
+      "キタオオサカキュウコウデンテツ",
+      "北大阪急行電鉄株式会社",
+      "北急",
+      "197"
+    ]
+  },
+  {
+    "SOPID": "19699a56-b26b-4442-8f3b-139f7066f278",
+    "Name": {
+      "ja": "泉北高速鉄道",
+      "en": "Senboku High Speed ​​Railway",
+      "ko": "센호쿠 고속철도",
+      "zh": "仙北高速铁路"
+    },
+    "Link": "https://www.semboku.jp/",
+    "Arias": [
+      "泉北高速鉄道",
+      "センボクコウソクテツドウ",
+      "泉北高速鉄道株式会社",
+      "泉北高速",
+      "198"
+    ]
+  },
+  {
+    "SOPID": "4e3af027-3804-4f2e-9fd7-321a291b52fc",
+    "Name": {
+      "ja": "水間鉄道",
+      "en": "Mizuma Railway",
+      "ko": "수간 철도",
+      "zh": "三潴铁道"
+    },
+    "Link": "http://www.suitetsu.com/",
+    "Arias": [
+      "水間鉄道",
+      "ミズマテツドウ",
+      "水間鉄道株式会社",
+      "水鉄",
+      "199"
+    ]
+  },
+  {
+    "SOPID": "75f635a3-dd5a-45b7-a196-4c52d85b6ad3",
+    "Name": {
+      "ja": "Osaka Metro",
+      "en": "Osaka Metro",
+      "ko": "오사카 메트로",
+      "zh": "大阪地铁"
+    },
+    "Link": "http://www.osakametro.co.jp",
+    "Arias": [
+      "Osaka Metro",
+      "オオサカメトロ",
+      "大阪市高速電気軌道株式会社",
+      "大阪メトロ",
+      "249"
+    ]
+  },
+  {
+    "SOPID": "5580ca86-1e58-4161-8653-0da2fb72afc4",
+    "Name": {
+      "ja": "大阪市交通局",
+      "en": "Osaka City Transportation Bureau",
+      "ko": "오사카시 교통국",
+      "zh": "大阪市交通局"
+    },
+    "Link": "http://www.city.osaka.lg.jp/toshikotsu/",
+    "Arias": [
+      "大阪市交通局",
+      "オオサカシコウツウキョク",
+      "大阪市交通局",
+      "大阪市交通局",
+      "200"
+    ]
+  },
+  {
+    "SOPID": "57eea926-e925-4c9d-948b-ef7c5b0009ea",
+    "Name": {
+      "ja": "大阪モノレール株式会社",
+      "en": "Osaka Monorail Co., Ltd.",
+      "ko": "오사카 모노레일 주식회사",
+      "zh": "大阪单轨电车株式会社"
+    },
+    "Link": "http://www.osaka-monorail.co.jp/",
+    "Arias": [
+      "大阪モノレール株式会社",
+      "オオサカモノレール",
+      "大阪モノレール株式会社",
+      "大阪モノレール",
+      "201"
+    ]
+  },
+  {
+    "SOPID": "addd0b82-2cf4-4cde-aae9-c2094c12e302",
+    "Name": {
+      "ja": "阪堺電気軌道",
+      "en": "Hankai Electric Tramway",
+      "ko": "한사카이 전기 궤도",
+      "zh": "阪堺电车"
+    },
+    "Link": "http://www.hankai.co.jp/",
+    "Arias": [
+      "阪堺電気軌道",
+      "ハンカイデンキキドウ",
+      "阪堺電気軌道株式会社",
+      "阪堺",
+      "202"
+    ]
+  },
+  {
+    "SOPID": "e6e507cf-a106-4553-8cea-483c097e626d",
+    "Name": {
+      "ja": "神戸高速鉄道",
+      "en": "Kobe Rapid Railway",
+      "ko": "고베 고속철도",
+      "zh": "神户高速铁道"
+    },
+    "Link": "http://www.kobe-kousoku.jp/",
+    "Arias": [
+      "神戸高速鉄道",
+      "コウベコウソクテツドウ",
+      "神戸高速鉄道株式会社",
+      "神戸高速",
+      "203"
+    ]
+  },
+  {
+    "SOPID": "e757b56c-6709-4feb-8b98-5c7e24da2967",
+    "Name": {
+      "ja": "神戸電鉄",
+      "en": "Kobe Electric Railway",
+      "ko": "고베 전철",
+      "zh": "神户电铁"
+    },
+    "Link": "http://www.shintetsu.co.jp/",
+    "Arias": [
+      "神戸電鉄",
+      "コウベデンテツ",
+      "神戸電鉄株式会社",
+      "神鉄",
+      "204"
+    ]
+  },
+  {
+    "SOPID": "9f362552-7a10-477a-832e-950681dc65af",
+    "Name": {
+      "ja": "北神急行電鉄",
+      "en": "Hokushin Express Railway",
+      "ko": "기타신 급행 전철",
+      "zh": "北信高速铁路"
+    },
+    "Link": "http://www.hokushinkyuko.co.jp/",
+    "Arias": [
+      "北神急行電鉄",
+      "ホクシンキュウコウデンテツ",
+      "北神急行電鉄株式会社",
+      "北神急行",
+      "205"
+    ]
+  },
+  {
+    "SOPID": "fb8b3689-7d6a-4631-91e2-847c1ff76849",
+    "Name": {
+      "ja": "山陽電気鉄道",
+      "en": "Sanyo Electric Railway",
+      "ko": "산요전기철도",
+      "zh": "山阳电铁"
+    },
+    "Link": "http://www.sanyo-railway.co.jp/",
+    "Arias": [
+      "山陽電気鉄道",
+      "サンヨウデンキテツドウ",
+      "山陽電気鉄道株式会社",
+      "山陽電車",
+      "206"
+    ]
+  },
+  {
+    "SOPID": "9db9c253-4938-42c5-9eb2-f6ec08e7d684",
+    "Name": {
+      "ja": "能勢電鉄",
+      "en": "Nose Electric Railway",
+      "ko": "노세 전철",
+      "zh": "鼻子电气铁路"
+    },
+    "Link": "http://noseden.hankyu.co.jp/",
+    "Arias": [
+      "能勢電鉄",
+      "ノセデンテツ",
+      "能勢電鉄株式会社",
+      "能勢電",
+      "207"
+    ]
+  },
+  {
+    "SOPID": "07bd2fa6-8a90-40cc-9128-d7091bf4ac7f",
+    "Name": {
+      "ja": "三木鉄道",
+      "en": "miki railway",
+      "ko": "미키 철도",
+      "zh": "三木铁道"
+    },
+    "Link": "",
+    "Arias": [
+      "三木鉄道",
+      "ミキテツドウ",
+      "三木鉄道株式会社",
+      "三木鉄道",
+      "208"
+    ]
+  },
+  {
+    "SOPID": "633844e8-cfe2-45c2-bc02-335e0f403b92",
+    "Name": {
+      "ja": "北条鉄道",
+      "en": "Hojo Railway",
+      "ko": "호조철도",
+      "zh": "北条铁道"
+    },
+    "Link": "http://www.hojorailway.jp/",
+    "Arias": [
+      "北条鉄道",
+      "ホウジョウテツドウ",
+      "北条鉄道株式会社",
+      "北条鉄道",
+      "209"
+    ]
+  },
+  {
+    "SOPID": "d3bc8ab9-de4b-4543-9c26-d54165aee31a",
+    "Name": {
+      "ja": "智頭急行",
+      "en": "Chizu Express",
+      "ko": "지치 급행",
+      "zh": "智头快递"
+    },
+    "Link": "http://www.chizukyu.co.jp/",
+    "Arias": [
+      "智頭急行",
+      "チズキュウコウ",
+      "智頭急行株式会社",
+      "智頭急",
+      "210"
+    ]
+  },
+  {
+    "SOPID": "c0bf7c8f-c53e-41a6-85c3-48d546cf4a73",
+    "Name": {
+      "ja": "神戸市交通局",
+      "en": "Kobe City Transportation Bureau",
+      "ko": "고베시 교통국",
+      "zh": "神户市交通局"
+    },
+    "Link": "http://www.city.kobe.lg.jp/",
+    "Arias": [
+      "神戸市交通局",
+      "コウベシコウツウキョク",
+      "神戸市交通局",
+      "神戸市交通局",
+      "211"
+    ]
+  },
+  {
+    "SOPID": "a35c1991-5568-4845-bab6-a8a0a50ccc6b",
+    "Name": {
+      "ja": "神戸新交通",
+      "en": "Kobe New Transit",
+      "ko": "고베 신교통",
+      "zh": "神户新交通"
+    },
+    "Link": "http://www.knt-liner.co.jp/",
+    "Arias": [
+      "神戸新交通",
+      "コウベシンコウツウ",
+      "神戸新交通株式会社",
+      "新神交",
+      "212"
+    ]
+  },
+  {
+    "SOPID": "677f6260-3a0f-4c3c-b599-bc59d0735aae",
+    "Name": {
+      "ja": "紀州鉄道",
+      "en": "Kishu Railway",
+      "ko": "기슈 철도",
+      "zh": "纪州铁道"
+    },
+    "Link": "http://www.kitetsu.co.jp/",
+    "Arias": [
+      "紀州鉄道",
+      "キシュウテツドウ",
+      "紀州鉄道株式会社",
+      "紀鉄",
+      "213"
+    ]
+  },
+  {
+    "SOPID": "1db3d54c-24c9-4feb-b874-f7135522bc9e",
+    "Name": {
+      "ja": "和歌山電鐵",
+      "en": "Wakayama Electric Railway",
+      "ko": "와카야마 전철",
+      "zh": "和歌山电铁"
+    },
+    "Link": "http://www.wakayama-dentetsu.co.jp/",
+    "Arias": [
+      "和歌山電鐵",
+      "ワカヤマデンテツ",
+      "和歌山電鐵株式会社",
+      "和歌山電鐵",
+      "214"
+    ]
+  },
+  {
+    "SOPID": "58190d6a-3ebe-45a1-ad63-6fdcd75b4264",
+    "Name": {
+      "ja": "若桜鉄道",
+      "en": "Wakasa Railway",
+      "ko": "와카사쿠라 철도",
+      "zh": "若狭铁道"
+    },
+    "Link": "http://www.infosakyu.ne.jp/~wakatetu/",
+    "Arias": [
+      "若桜鉄道",
+      "サカサテツドウ",
+      "若桜鉄道株式会社",
+      "若鉄",
+      "215"
+    ]
+  },
+  {
+    "SOPID": "96d63da0-d211-4a3d-b11e-f350aa51a7e9",
+    "Name": {
+      "ja": "一畑電車",
+      "en": "Ichibata train",
+      "ko": "이치하타 전철",
+      "zh": "一畑列车"
+    },
+    "Link": "http://www.ichibata.co.jp/railway/",
+    "Arias": [
+      "一畑電車",
+      "イチバタデンシャ",
+      "一畑電車株式会社",
+      "ばたでん",
+      "216"
+    ]
+  },
+  {
+    "SOPID": "a5ba6c92-bac8-4d63-a5bf-1843d8f1afbf",
+    "Name": {
+      "ja": "水島臨海鉄道",
+      "en": "Mizushima Rinkai Railway",
+      "ko": "미즈시마 임해철도",
+      "zh": "水岛临海铁道"
+    },
+    "Link": "http://www.mizurin.co.jp/",
+    "Arias": [
+      "水島臨海鉄道",
+      "ミズシマリンカイテツドウ",
+      "水島臨海鉄道株式会社",
+      "水島臨海鉄道",
+      "217"
+    ]
+  },
+  {
+    "SOPID": "484bd1a4-b525-4349-beb4-bbe35d670e9c",
+    "Name": {
+      "ja": "井原鉄道",
+      "en": "Ibara Railway",
+      "ko": "이하라 철도",
+      "zh": "井原铁道"
+    },
+    "Link": "http://plus.harenet.ne.jp/~ibarasen/",
+    "Arias": [
+      "井原鉄道",
+      "イバラテツドウ",
+      "井原鉄道株式会社",
+      "井原鉄道",
+      "218"
+    ]
+  },
+  {
+    "SOPID": "28bb1f84-c248-4f7b-b361-94638f49bf62",
+    "Name": {
+      "ja": "岡山電気軌道",
+      "en": "Okayama Electric Tramway",
+      "ko": "오카야마 전기 궤도",
+      "zh": "冈山电车"
+    },
+    "Link": "http://www.okayama-kido.co.jp/",
+    "Arias": [
+      "岡山電気軌道",
+      "オカヤマデンキキドウ",
+      "岡山電気軌道株式会社",
+      "岡電",
+      "219"
+    ]
+  },
+  {
+    "SOPID": "5a29e5dc-2326-4109-93b1-ff7a9f9755ae",
+    "Name": {
+      "ja": "スカイレールサービス",
+      "en": "skyrail service",
+      "ko": "스카이레일 서비스",
+      "zh": "空中缆车服务"
+    },
+    "Link": "",
+    "Arias": [
+      "スカイレールサービス",
+      "スカイレールサービス",
+      "スカイレールサービス株式会社",
+      "スカイレールサービス",
+      "220"
+    ]
+  },
+  {
+    "SOPID": "692e609a-d2d2-4c0b-ad31-6165fb0923a9",
+    "Name": {
+      "ja": "広島高速交通",
+      "en": "Hiroshima Rapid Transit",
+      "ko": "히로시마 고속 교통",
+      "zh": "广岛捷运"
+    },
+    "Link": "http://astramline.co.jp/",
+    "Arias": [
+      "広島高速交通",
+      "ヒロシマコウソクコウツウ",
+      "広島高速交通株式会社",
+      "広島高速交通",
+      "221"
+    ]
+  },
+  {
+    "SOPID": "991d7dcb-b4a8-4d99-bcc1-70ee8047b017",
+    "Name": {
+      "ja": "広島電鉄",
+      "en": "Hiroshima Electric Railway",
+      "ko": "히로시마 전철",
+      "zh": "广岛电铁"
+    },
+    "Link": "http://www.hiroden.co.jp/",
+    "Arias": [
+      "広島電鉄",
+      "ヒロシマデンテツ",
+      "広島電鉄株式会社",
+      "広電",
+      "222"
+    ]
+  },
+  {
+    "SOPID": "6cffeda3-1693-4fe3-a8ea-20f2d9bfe64b",
+    "Name": {
+      "ja": "錦川鉄道",
+      "en": "Nishikigawa Railway",
+      "ko": "금천철도",
+      "zh": "锦川铁道"
+    },
+    "Link": "http://nishikigawa.com/",
+    "Arias": [
+      "錦川鉄道",
+      "ニシキガワテツドウ",
+      "錦川鉄道株式会社",
+      "錦川鉄道",
+      "223"
+    ]
+  },
+  {
+    "SOPID": "657042e7-61b4-4ad0-9e81-1a87f9e10eef",
+    "Name": {
+      "ja": "阿佐海岸鉄道",
+      "en": "Asa Kaigan Railway",
+      "ko": "아사 해안 철도",
+      "zh": "阿佐海岸铁道"
+    },
+    "Link": "http://www.asatetu.v-co.jp/",
+    "Arias": [
+      "阿佐海岸鉄道",
+      "アサカイガンテツドウ",
+      "阿佐海岸鉄道株式会社",
+      "阿佐鉄",
+      "224"
+    ]
+  },
+  {
+    "SOPID": "89fc31e8-0ef5-47d4-8491-0ccf4e9a77e6",
+    "Name": {
+      "ja": "高松琴平電気鉄道",
+      "en": "Takamatsu Kotohira Electric Railway",
+      "ko": "다카마쓰 고토히라 전기철도",
+      "zh": "高松琴平电铁"
+    },
+    "Link": "http://www.kotoden.co.jp/",
+    "Arias": [
+      "高松琴平電気鉄道",
+      "タカマツコトヒラデンキテツドウ",
+      "高松琴平電気鉄道株式会社",
+      "琴電",
+      "225"
+    ]
+  },
+  {
+    "SOPID": "2c911ab5-ee96-4f9d-aac8-0b49d3ce39b7",
+    "Name": {
+      "ja": "伊予鉄道",
+      "en": "Iyo Railway",
+      "ko": "이요 철도",
+      "zh": "伊予铁道"
+    },
+    "Link": "http://www.iyotetsu.co.jp/",
+    "Arias": [
+      "伊予鉄道",
+      "イヨテツドウ",
+      "伊予鉄道株式会社",
+      "伊予鉄",
+      "226"
+    ]
+  },
+  {
+    "SOPID": "37c4448e-6c9d-409c-a89d-bd232da490a5",
+    "Name": {
+      "ja": "土佐くろしお鉄道",
+      "en": "Tosa Kuroshio Railway",
+      "ko": "도사 쿠로시오 철도",
+      "zh": "土佐黑潮铁道"
+    },
+    "Link": "http://www.tosakuro.co.jp/",
+    "Arias": [
+      "土佐くろしお鉄道",
+      "トサクロシオテツドウ",
+      "土佐くろしお鉄道株式会社",
+      "土佐くろしお鉄道",
+      "227"
+    ]
+  },
+  {
+    "SOPID": "4e7f6b08-953f-4e77-a049-51e89b7bc1d8",
+    "Name": {
+      "ja": "土佐電気鉄道",
+      "en": "Tosa Electric Railway",
+      "ko": "도사 전기 철도",
+      "zh": "土佐电铁"
+    },
+    "Link": "http://www.tosaden.co.jp/",
+    "Arias": [
+      "土佐電気鉄道",
+      "トサデンキテツドウ",
+      "土佐電気鉄道株式会社",
+      "土佐電",
+      "228"
+    ]
+  },
+  {
+    "SOPID": "c9956822-afbc-459d-a6ce-d6ac23def46f",
+    "Name": {
+      "ja": "甘木鉄道",
+      "en": "Amagi Railway",
+      "ko": "아마기 철도",
+      "zh": "天城铁道"
+    },
+    "Link": "http://www.amatetsu.jp/",
+    "Arias": [
+      "甘木鉄道",
+      "アマギテツドウ",
+      "甘木鉄道株式会社",
+      "甘木鉄道",
+      "229"
+    ]
+  },
+  {
+    "SOPID": "f056fbd4-1a06-425b-aa58-49a39d3bf845",
+    "Name": {
+      "ja": "平成筑豊鉄道",
+      "en": "Heisei Chikuho Railway",
+      "ko": "헤이세이 치쿠호 철도",
+      "zh": "平成筑丰铁道"
+    },
+    "Link": "http://www.heichiku.net/",
+    "Arias": [
+      "平成筑豊鉄道",
+      "ヘイセイチクホウテツドウ",
+      "平成筑豊鉄道株式会社",
+      "平成筑豊鉄道",
+      "230"
+    ]
+  },
+  {
+    "SOPID": "bf928a1d-7e63-4e25-a4ad-9cf9e78f29d4",
+    "Name": {
+      "ja": "福岡市交通局",
+      "en": "Fukuoka City Transportation Bureau",
+      "ko": "후쿠오카시 교통국",
+      "zh": "福冈市交通局"
+    },
+    "Link": "http://subway.city.fukuoka.lg.jp/",
+    "Arias": [
+      "福岡市交通局",
+      "フクオカシコウツウキョク",
+      "福岡市交通局",
+      "福岡市交通局",
+      "231"
+    ]
+  },
+  {
+    "SOPID": "8fe65c71-0172-4f24-a6b9-cd88f3acdf60",
+    "Name": {
+      "ja": "北九州高速鉄道",
+      "en": "Kitakyushu Rapid Railway",
+      "ko": "기타큐슈 고속철도",
+      "zh": "北九州高速铁路"
+    },
+    "Link": "http://www.kitakyushu-monorail.co.jp/",
+    "Arias": [
+      "北九州高速鉄道",
+      "キタキュウシュウコウソクテツドウ",
+      "北九州高速鉄道株式会社",
+      "北九州モノレール",
+      "232"
+    ]
+  },
+  {
+    "SOPID": "07241eb8-4d52-4c76-b2e3-439d518bdebd",
+    "Name": {
+      "ja": "筑豊電気鉄道",
+      "en": "Chikuho Electric Railway",
+      "ko": "치쿠호 전기 철도",
+      "zh": "筑丰电铁"
+    },
+    "Link": "http://www.chikutetsu.co.jp/",
+    "Arias": [
+      "筑豊電気鉄道",
+      "チクホウデンキテツドウ",
+      "筑豊電気鉄道株式会社",
+      "筑鉄",
+      "233"
+    ]
+  },
+  {
+    "SOPID": "5492280d-6234-4f5c-8286-f938e5e5ed83",
+    "Name": {
+      "ja": "松浦鉄道",
+      "en": "Matsuura Railway",
+      "ko": "마쓰우라 철도",
+      "zh": "松浦铁道"
+    },
+    "Link": "http://www.matutetu.com/",
+    "Arias": [
+      "松浦鉄道",
+      "マツウラテツドウ",
+      "松浦鉄道株式会社",
+      "松浦鉄道",
+      "234"
+    ]
+  },
+  {
+    "SOPID": "d78ce8aa-1472-466f-9fcd-cfa441be212c",
+    "Name": {
+      "ja": "島原鉄道",
+      "en": "Shimabara Railway",
+      "ko": "시마바라 철도",
+      "zh": "岛原铁道"
+    },
+    "Link": "http://www.shimatetsu.co.jp/",
+    "Arias": [
+      "島原鉄道",
+      "シマバラテツドウ",
+      "島原鉄道株式会社",
+      "島原鉄道",
+      "235"
+    ]
+  },
+  {
+    "SOPID": "c6d0dee7-9eac-4626-83c1-b2f657d60a0d",
+    "Name": {
+      "ja": "長崎電気軌道",
+      "en": "Nagasaki Electric Tramway",
+      "ko": "나가사키 전기 궤도",
+      "zh": "长崎电车"
+    },
+    "Link": "http://www.naga-den.com/",
+    "Arias": [
+      "長崎電気軌道",
+      "ナガサキデンキキドウ",
+      "長崎電気軌道株式会社",
+      "長崎電気軌道",
+      "236"
+    ]
+  },
+  {
+    "SOPID": "57c131ef-cda5-4505-9fef-4e8a015eeb17",
+    "Name": {
+      "ja": "熊本電気鉄道",
+      "en": "Kumamoto Electric Railway",
+      "ko": "구마모토 전기 철도",
+      "zh": "熊本电铁"
+    },
+    "Link": "http://www.kumamotodentetsu.co.jp/",
+    "Arias": [
+      "熊本電気鉄道",
+      "クマモトデンキテツドウ",
+      "熊本電気鉄道株式会社",
+      "熊本電気鉄道",
+      "237"
+    ]
+  },
+  {
+    "SOPID": "545df08a-47b5-4e1e-b743-cb48106b4fa5",
+    "Name": {
+      "ja": "南阿蘇鉄道",
+      "en": "Minamiaso Railway",
+      "ko": "미나미아소 철도",
+      "zh": "南阿苏铁道"
+    },
+    "Link": "http://www.mt-torokko.com/",
+    "Arias": [
+      "南阿蘇鉄道",
+      "ミナミアソテツドウ",
+      "南阿蘇鉄道株式会社",
+      "南阿蘇鉄道",
+      "238"
+    ]
+  },
+  {
+    "SOPID": "628af400-17ac-4415-a11d-7eb21f28cdd4",
+    "Name": {
+      "ja": "くま川鉄道",
+      "en": "Kumagawa Railway",
+      "ko": "쿠마가와 철도",
+      "zh": "球磨川铁道"
+    },
+    "Link": "http://www.kumagawa-rail.com/",
+    "Arias": [
+      "くま川鉄道",
+      "クマガワテツドウ",
+      "くま川鉄道株式会社",
+      "くま川鉄道",
+      "239"
+    ]
+  },
+  {
+    "SOPID": "51a4d6b8-19ae-4b62-a66a-810a55723d47",
+    "Name": {
+      "ja": "肥薩おれんじ鉄道",
+      "en": "Hisatsu Orange Railway",
+      "ko": "히사쓰 오렌지 철도",
+      "zh": "肥萨橙铁道"
+    },
+    "Link": "http://www.hs-orange.com/",
+    "Arias": [
+      "肥薩おれんじ鉄道",
+      "ヒサツオレンジテツドウ",
+      "肥薩おれんじ鉄道株式会社",
+      "肥薩おれんじ鉄道",
+      "240"
+    ]
+  },
+  {
+    "SOPID": "86fe74c1-9eeb-46e3-a805-79de7fecce5c",
+    "Name": {
+      "ja": "熊本市交通局",
+      "en": "Kumamoto City Transportation Bureau",
+      "ko": "구마모토시 교통국",
+      "zh": "熊本市交通局"
+    },
+    "Link": "http://www.kotsu-kumamoto.jp/",
+    "Arias": [
+      "熊本市交通局",
+      "クマモトシコウツウキョク",
+      "熊本市交通局",
+      "熊本市交通局",
+      "241"
+    ]
+  },
+  {
+    "SOPID": "ccdcb7c4-fb67-405f-86d2-65c7fe8102e8",
+    "Name": {
+      "ja": "鹿児島市交通局",
+      "en": "Kagoshima City Transportation Bureau",
+      "ko": "가고시마시 교통국",
+      "zh": "鹿儿岛市交通局"
+    },
+    "Link": "http://www.kotsu-city-kagoshima.jp/",
+    "Arias": [
+      "鹿児島市交通局",
+      "カゴシマコウツウキョク",
+      "鹿児島市交通局",
+      "鹿児島市交通局",
+      "242"
+    ]
+  },
+  {
+    "SOPID": "a812d199-1fe7-4c81-88be-4ac132df2d87",
+    "Name": {
+      "ja": "沖縄都市モノレール",
+      "en": "Okinawa Urban Monorail",
+      "ko": "오키나와 도시 모노레일",
+      "zh": "冲绳都市单轨电车"
+    },
+    "Link": "http://www.yui-rail.co.jp/",
+    "Arias": [
+      "沖縄都市モノレール",
+      "オキナワトシモノレール",
+      "沖縄都市モノレール株式会社",
+      "沖縄都市モノレール",
+      "243"
+    ]
+  }
+]

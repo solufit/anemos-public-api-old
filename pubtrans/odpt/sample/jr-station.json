@@ -1,0 +1,170 @@
+[
+  {
+    "@id": "urn:ucode:_00001C00000000000001000003102602",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "川越",
+    "owl:sameAs": "odpt.Station:JR-East.SaikyoKawagoe.Kawagoe",
+    "odpt:railway": "odpt.Railway:JR-East.SaikyoKawagoe",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Kawagoe",
+      "ja": "川越"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C00000000000001000003102690",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "武蔵浦和",
+    "owl:sameAs": "odpt.Station:JR-East.SaikyoKawagoe.MusashiUrawa",
+    "odpt:railway": "odpt.Railway:JR-East.SaikyoKawagoe",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Musashi-Urawa",
+      "ja": "武蔵浦和"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C00000000000001000003102695",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "大宮",
+    "owl:sameAs": "odpt.Station:JR-East.SaikyoKawagoe.Omiya",
+    "odpt:railway": "odpt.Railway:JR-East.SaikyoKawagoe",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Omiya",
+      "ja": "大宮"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C00000000000001000003102605",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "指扇",
+    "owl:sameAs": "odpt.Station:JR-East.SaikyoKawagoe.Sashiogi",
+    "odpt:railway": "odpt.Railway:JR-East.SaikyoKawagoe",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Sashiogi",
+      "ja": "指扇"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C000000000000010000031027F0",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "三鷹",
+    "owl:sameAs": "odpt.Station:JR-East.ChuoSobuLocal.Mitaka",
+    "odpt:railway": "odpt.Railway:JR-East.ChuoSobuLocal",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Mitaka",
+      "ja": "三鷹"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C000000000000010000031027D0",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "津田沼",
+    "owl:sameAs": "odpt.Station:JR-East.ChuoSobuLocal.Tsudanuma",
+    "odpt:railway": "odpt.Railway:JR-East.ChuoSobuLocal",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Tsudanuma",
+      "ja": "津田沼"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C0000000000000100000310272D",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "我孫子",
+    "owl:sameAs": "odpt.Station:JR-East.JobanLocal.Abiko",
+    "odpt:railway": "odpt.Railway:JR-East.JobanLocal",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Abiko",
+      "ja": "我孫子"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C0000000000000100000310272B",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "柏",
+    "owl:sameAs": "odpt.Station:JR-East.JobanLocal.Kashiwa",
+    "odpt:railway": "odpt.Railway:JR-East.JobanLocal",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Kashiwa",
+      "ja": "柏"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C00000000000001000003102725",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "松戸",
+    "owl:sameAs": "odpt.Station:JR-East.JobanLocal.Matsudo",
+    "odpt:railway": "odpt.Railway:JR-East.JobanLocal",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Matsudo",
+      "ja": "松戸"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C0000000000000100000310272F",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "取手",
+    "owl:sameAs": "odpt.Station:JR-East.JobanLocal.Toride",
+    "odpt:railway": "odpt.Railway:JR-East.JobanLocal",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Toride",
+      "ja": "取手"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C0000000000000100000310268A",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "赤羽",
+    "owl:sameAs": "odpt.Station:JR-East.SaikyoKawagoe.Akabane",
+    "odpt:railway": "odpt.Railway:JR-East.SaikyoKawagoe",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Akabane",
+      "ja": "赤羽"
+    }
+  },
+  {
+    "@id": "urn:ucode:_00001C00000000000001000003102687",
+    "@type": "odpt:Station",
+    "dc:date": "2023-03-18T11:00:00+09:00",
+    "@context": "http://vocab.odpt.org/context_odpt.jsonld",
+    "dc:title": "池袋",
+    "owl:sameAs": "odpt.Station:JR-East.SaikyoKawagoe.Ikebukuro",
+    "odpt:railway": "odpt.Railway:JR-East.SaikyoKawagoe",
+    "odpt:operator": "odpt.Operator:JR-East",
+    "odpt:stationTitle": {
+      "en": "Ikebukuro",
+      "ja": "池袋"
+    }
+  }
+]
