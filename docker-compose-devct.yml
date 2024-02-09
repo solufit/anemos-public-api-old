@@ -49,6 +49,7 @@ services:
       BSKY_USER: 'siestabot.bsky.social'
       BSKY_PASS: 'dNJ2U23EU2Wr-ny'
       ALERT_URL: 'https://discord.com/api/webhooks/1204746660228366376/EcsaNqpivJTIpYLYqtqlW1vI0p_aESbNMLkBc3vx1Af0xBC5ZFeQBHg_K_msRom3473L'
+      LINE_TOKEN: 'kratnWiCO8dw49BW9jTtmyGPFVLJp9tQOW+Gm39dOPhFgzdnb3WqbRivINcTs0k61su5GF2hS4ZHSU35YC8G4/XQyCQtovygzJ1UcWa2VIBEqpwdYzj9ybd6YG1FuMgSWrviWqjuJdLvZvyCXSAZPAdB04t89/1O/w1cDnyilFU='
       STAGE: 'DEVELOP'
     volumes:
       - ./:/workspace/
