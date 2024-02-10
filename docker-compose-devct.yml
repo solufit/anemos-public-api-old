@@ -52,7 +52,7 @@ services:
       LINE_TOKEN: 'kratnWiCO8dw49BW9jTtmyGPFVLJp9tQOW+Gm39dOPhFgzdnb3WqbRivINcTs0k61su5GF2hS4ZHSU35YC8G4/XQyCQtovygzJ1UcWa2VIBEqpwdYzj9ybd6YG1FuMgSWrviWqjuJdLvZvyCXSAZPAdB04t89/1O/w1cDnyilFU='
       STAGE: 'DEVELOP'
     volumes:
-      - ./:/workspace/
+      - ./:/src/
     expose:
       - 8000
     ports:
