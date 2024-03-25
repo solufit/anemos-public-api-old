@@ -4,7 +4,7 @@ services:
     container_name: anemos-api
     build:
       context: .
-      dockerfile: ./build/api/Dockerfile
+      dockerfile: ./build/api/dockerfile
     volumes:
       - ./:/workspace/
     restart: always
