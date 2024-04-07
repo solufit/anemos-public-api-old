@@ -21,7 +21,7 @@ services:
 
 
   anemos-maria-database:
-    container_name: anemos-maria-database
+    container_name: anemos-maria-database-for-dev
     image: mariadb
     expose:
       - 3306
@@ -34,7 +34,7 @@ services:
       - solufit
 
   anemos-mongo-database:
-    container_name: anemos-mongo-database
+    container_name: anemos-mongo-database-for-dev
     image: mongo
     restart: always
     volumes:
@@ -47,7 +47,7 @@ services:
       - solufit
 
   anemos-redis-database:
-    container_name: anemos-redis-database
+    container_name: anemos-redis-database-for-dev
     image: redis:latest
     restart: always
     expose:
