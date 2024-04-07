@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+    volumes:
+      - ../..:/workspaces:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    networks:
+      - solufit
+
+    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
+    # (Adding the "ports" property to this file will not forward from a Codespace.)
+
+
+  anemos-maria-database:
+    container_name: anemos-maria-database
+    image: mariadb
+    expose:
+      - 3306
+    volumes:
+      - ./db/maria:/var/lib/mysql
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - solufit
+
+  anemos-mongo-database:
+    container_name: anemos-mongo-database
+    image: mongo
+    restart: always
+    volumes:
+      - ./db/mongo:/data/db
+    ports:
+      - 27171:27017
+    env_file:
+      - .env
+    networks:
+      - solufit
+
+  anemos-redis-database:
+    container_name: anemos-redis-database
+    image: redis:latest
+    restart: always
+    expose:
+      - 6379
+    volumes:
+      - "./db/redis:/data"
+    env_file:
+      - .env
+    networks:
+      - solufit
+
+networks:
+  solufit:
+
+
+
