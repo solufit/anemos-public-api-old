@@ -8,10 +8,12 @@
 	
 	"features": {
 		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-		"rust": {
-			"install": "latest",
-			"additionalPackages": ["cargo", "rustup"]
+		"ghcr.io/devcontainers/features/rust:1.1.2": {
+			"version": "1.76",
+			"profile": "complete"
+			
 		}
+
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -22,7 +24,17 @@
 	// "forwardPorts": [5000, 5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install --user -r requirements.txt"
+	"postCreateCommand": "pip install --user -r requirements.txt",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vadimcn.vscode-lldb",
+				"rust-lang.rust-analyzer",
+				"serayuzgur.crates",
+				"tamasfe.even-better-toml"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},

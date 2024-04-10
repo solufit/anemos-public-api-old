@@ -16,6 +16,9 @@ services:
     networks:
       - solufit
 
+    env_file:
+      - .envfile
+
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
@@ -29,7 +32,7 @@ services:
       - ./db/maria:/var/lib/mysql
     restart: always
     env_file:
-      - .env
+      - .envfile
     networks:
       - solufit
 
@@ -42,7 +45,7 @@ services:
     ports:
       - 27171:27017
     env_file:
-      - .env
+      - .envfile
     networks:
       - solufit
 
@@ -55,7 +58,7 @@ services:
     volumes:
       - "./db/redis:/data"
     env_file:
-      - .env
+      - .envfile
     networks:
       - solufit
 
