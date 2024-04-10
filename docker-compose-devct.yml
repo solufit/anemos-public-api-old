@@ -44,7 +44,7 @@ services:
     container_name: anemos-commander
     build:
       context: .
-      dockerfile: ./build/main/Dockerfile
+      dockerfile: ./build/main/dockerfile
     environment:
       BSKY_USER: 'siestabot.bsky.social'
       BSKY_PASS: 'dNJ2U23EU2Wr-ny'
