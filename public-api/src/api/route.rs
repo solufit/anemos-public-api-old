@@ -1,9 +1,12 @@
 use actix_web::web;
+use utoipa::OpenApi;
+use utoipa_swagger_ui::SwaggerUi;
 
+use crate::api::openapi::ApiDoc;
 
 pub fn config(cfg: &mut web::ServiceConfig) {
     cfg.service(
-        web::scope("/v1")
-            //.route("/", web::get().to(index))
+        SwaggerUi::new("/docs/{_:.*}")
+            .url("/v1/docs/openapi.json", ApiDoc::openapi())
     );
 }
