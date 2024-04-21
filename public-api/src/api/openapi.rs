@@ -10,4 +10,5 @@ use utoipa::OpenApi;
     paths(),
     components()
 )]
+//TODO Add Info to auto generate version
 pub struct ApiDoc;
