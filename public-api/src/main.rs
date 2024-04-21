@@ -1,9 +1,10 @@
+use std::env;
+
 use actix_web::{App, HttpServer};
 
 pub mod api;
 
 use crate::api::route::config;
-use crate::api::utils::version::version;
 
 
 #[actix_web::main]
@@ -11,7 +12,7 @@ async fn main() -> std::io::Result<()> {
 
     env_logger::init();
     log::info!("Starting Anemos Public API Server at port 8080");
-    log::info!("Starting Anemos Public API Server Version: {} at port 8080", version());
+    log::info!("Starting Anemos Public API Server Version: {} at port 8080", env!("CARGO_PKG_VERSION"));
     log::debug!("Debugging mode enabled");
     
 

@@ -8,5 +8,6 @@ pub fn config(cfg: &mut web::ServiceConfig) {
     cfg.service(
         SwaggerUi::new("/docs/{_:.*}")
             .url("/v1/docs/openapi.json", ApiDoc::openapi())
-    );
+    )
+    .service(super::versions::versions);
 }
