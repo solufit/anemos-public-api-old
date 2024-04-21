@@ -4,7 +4,7 @@ services:
     container_name: anemos-api
     build:
       context: .
-      dockerfile: ./build/api/dockerfile
+      dockerfile: ./build/api/Dockerfile
     volumes:
       - ./:/workspace/
     restart: always
@@ -17,12 +17,13 @@ services:
     container_name: anemos-exe-realtime
     build:
       context: .
-      dockerfile: ./build/autoexe/dockerfile
+      dockerfile: ./build/autoexe/Dockerfile
     command: [ 'python', 'autoexe/realtime.py' ]
     environment:
       TZ: 'Asia/Tokyo'
       ANALYZE: 'http://anemos-analyze'
     restart: always
+
     volumes:
       - ./:/workspace/
     env_file:
@@ -32,7 +33,7 @@ services:
     container_name: anemos-exe-timer
     build:
       context: .
-      dockerfile: ./build/autoexe/dockerfile
+      dockerfile: ./build/autoexe/Dockerfile
     command: [ 'python', 'autoexe/timer.py' ]
     restart: always
     volumes:
@@ -44,7 +45,7 @@ services:
     container_name: anemos-commander
     build:
       context: .
-      dockerfile: ./build/main/dockerfile
+      dockerfile: ./build/main/Dockerfile
     environment:
       BSKY_USER: 'siestabot.bsky.social'
       BSKY_PASS: 'dNJ2U23EU2Wr-ny'
