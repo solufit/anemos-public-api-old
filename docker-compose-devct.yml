@@ -12,6 +12,8 @@ services:
       - 5000:80
     env_file:
       - .env
+    networks:
+      - solufit
 
   anemos-exe-realtime:
     container_name: anemos-exe-realtime
@@ -28,6 +30,8 @@ services:
       - ./:/workspace/
     env_file:
       - .env
+    networks:
+      - solufit
 
   anemos-exe-timer:
     container_name: anemos-exe-timer
@@ -40,6 +44,8 @@ services:
       - ./:/workspace/
     env_file:
       - .env
+    networks:
+      - solufit
 
   anemos-commander:
     container_name: anemos-commander
@@ -56,13 +62,12 @@ services:
       - ./:/src/
     ports:
       - 13080:80
-    depends_on:
-      - anemos-maria-database
-      - anemos-mongo-database
-      - anemos-redis-database
+
     restart: always
     env_file:
       - .env
+    networks:
+      - solufit
 
   anemos-maria-database:
     container_name: anemos-maria-database
@@ -74,6 +79,8 @@ services:
     restart: always
     env_file:
       - .env
+    networks:
+      - solufit
 
   anemos-mongo-database:
     container_name: anemos-mongo-database
@@ -85,6 +92,8 @@ services:
       - 27171:27017
     env_file:
       - .env
+    networks:
+      - solufit
 
   anemos-redis-database:
     container_name: anemos-redis-database
@@ -96,3 +105,10 @@ services:
       - "./db/redis:/data"
     env_file:
       - .env
+    networks:
+      - solufit
+
+networks:
+  solufit:
+    external: true
+
