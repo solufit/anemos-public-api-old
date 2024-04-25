@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust Debug Launch",
+            "program": "${workspaceRoot}/public-api/target/debug/public-api",
+            "args": [],
+            "cwd": "${workspaceRoot}/public-api/target/debug/",
+            "sourceLanguages": ["rust"],
+            "env": {
+                "RUST_LOG" : "debug",
+                "RUST_BACKTRACE" : "1",
+            }
+        }
+    ]
+}
