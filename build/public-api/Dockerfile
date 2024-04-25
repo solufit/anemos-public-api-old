@@ -10,5 +10,5 @@ WORKDIR /src/
 RUN cargo build --release
 
 # RUN
-ENTRYPOINT [ "cargo", "run", "--release" ]
+CMD [ "cargo", "run", "--release" ]
 
