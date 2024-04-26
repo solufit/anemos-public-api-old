@@ -13,6 +13,19 @@
                 "RUST_LOG" : "debug",
                 "RUST_BACKTRACE" : "1",
             }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust public-api-collector Debug Launch",
+            "program": "${workspaceRoot}/public-api-collector/target/debug/public-api-collector",
+            "args": [],
+            "cwd": "${workspaceRoot}/public-api-collector/target/debug/",
+            "sourceLanguages": ["rust"],
+            "env": {
+                "RUST_LOG" : "debug",
+                "RUST_BACKTRACE" : "1",
+            }
         }
     ]
 }
