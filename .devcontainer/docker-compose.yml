@@ -23,45 +23,6 @@ services:
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
 
-  anemos-maria-database:
-    container_name: anemos-maria-database
-    image: mariadb
-    expose:
-      - 3306
-    volumes:
-      - ./db/maria:/var/lib/mysql
-    restart: always
-    env_file:
-      - .envfile
-    networks:
-      - solufit
-
-  anemos-mongo-database:
-    container_name: anemos-mongo-database
-    image: mongo
-    restart: always
-    volumes:
-      - ./db/mongo:/data/db
-    ports:
-      - 27171:27017
-    env_file:
-      - .envfile
-    networks:
-      - solufit
-
-  anemos-redis-database:
-    container_name: anemos-redis-database
-    image: redis:latest
-    restart: always
-    expose:
-      - 6379
-    volumes:
-      - "./db/redis:/data"
-    env_file:
-      - .envfile
-    networks:
-      - solufit
-
 networks:
   solufit:
     external: true
