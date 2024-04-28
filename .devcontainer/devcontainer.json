@@ -35,6 +35,11 @@
 				"SeaQL.firedbg-rust"
 			]
 		}
+	},
+	"containerEnv": {
+		"RUST_LOG": "debug",
+		"RUST_BACKTRACE": "1",
+		"PUBLIC_API_REDIS_HOST": "anemos-public-redis-dev"
 	}
 
 	// Configure tool-specific properties.
