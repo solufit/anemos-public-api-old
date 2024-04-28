@@ -10,6 +10,15 @@ pub struct IntensityStation {
     Int: String,
 }
 
+
+#[derive(Debug, Serialize, Deserialize)]
+#[allow(non_snake_case)]
+#[serde(untagged)]
+pub enum IntensityStationEnum {
+    IntensityStation(IntensityStation),
+    IntensityStationVec(Vec<IntensityStation>)
+}
+
 /// Represents a city.
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
@@ -17,7 +26,7 @@ pub struct City {
     Name: String,
     Code: String,
     MaxInt: String,
-    IntensityStation: Vec<IntensityStation>,
+    IntensityStation: Option<IntensityStationEnum>
 }
 
 /// Represents a Area
@@ -27,7 +36,7 @@ pub struct Area {
     Name: String,
     Code: String,
     MaxInt: String,
-    IntensityStation: Vec<City>,
+    City: Option<Vec<City>>
 }
 
 /// Represents an intensity.
@@ -37,7 +46,7 @@ pub struct Intensity {
     Name: String,
     Code: String,
     MaxInt: String,
-    City: Vec<Area>,
+    Area: Option<Vec<Area>>
 }
 
 /// Represents an earthquake.
@@ -56,7 +65,7 @@ pub struct EarthQuake {
     RegionCode: String,
     MaxInt: String,
     Magnitude: f64,
-    Intensity: Vec<Intensity>,
+    Intensity: Option<Vec<Intensity>>
 }
 
 #[cfg(test)]
