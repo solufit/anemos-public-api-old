@@ -1,5 +1,6 @@
 mod get_env;
 mod redis;
+mod earthquake;
 
 use tokio::time::{interval, Duration};
 
