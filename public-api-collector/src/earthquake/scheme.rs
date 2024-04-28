@@ -115,7 +115,7 @@ mod tests {
 
 
     #[test]
-    fn test_scheme() -> anyhow::Result<(), anyhow::Error> {
+    fn test_convert_json() -> anyhow::Result<(), anyhow::Error> {
         println!("TEST_JSON: {}", TEST_JSON);
         let deserialized = serde_json::from_str::<EarthQuake>(TEST_JSON).unwrap();
 
