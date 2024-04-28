@@ -12,7 +12,7 @@ pub struct redisOperation {
 impl redisOperation {
     /// Create a new Redis operation.
     pub async fn new() -> Result<Self, Error>  {
-        let client = redis::Client::open(format!("redis://{}", PUBLIC_API_REDIS_HOST.to_string()))?;
+        let client = redis::Client::open(format!("redis://{}", *PUBLIC_API_REDIS_HOST))?;
         let con = client.get_connection()?;
         let multiplexed = client.get_multiplexed_tokio_connection().await?;
 
