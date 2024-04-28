@@ -47,9 +47,10 @@ mod tests {
         let mut redis_op = redisOperation::new().await?;
 
         // Write a value to Redis
-        let key = "my_key";
-        let value = "my_value";
+        let key = "single_my_key";
+        let value = "single_my_value";
         redis_op.con.set(key, value)?;
+
 
         // Read the value from Redis
         let result: Option<String> = redis_op.con.get(key)?;
@@ -62,14 +63,19 @@ mod tests {
         Ok(())
         }
 
-        #[tokio::test]
+    #[tokio::test]
     async fn test_redis_async_single_read_write() -> Result<(), Error> {
         // Create a new Redis operation
         let mut redis_op = redisOperation::new().await?;
 
+
         // Write a value to Redis
-        let key = "my_key";
-        let value = "my_value";
+        let key = "single_2-my_key";
+        let value = "single_2-my_value";
+
+        redis_op.multiplexed_connection.send_packed_command(
+            &redis::Cmd::del(key)
+        ).await?;
 
         redis_op.multiplexed_connection.send_packed_command(
             &redis::Cmd::set(key, value)
@@ -99,11 +105,15 @@ mod tests {
         let mut redis_op = redisOperation::new().await?;
 
         // Write a value to Redis
-        let key = "my_key";
-        let value = "my_value";
-        let key1 = "my_key1";
-        let value1 = "my_value1";
+        let key = "multi-my_key";
+        let value = "multi-my_value";
+        let key1 = "multi-my_key1";
+        let value1 = "multi-my_value1";
 
+        redis_op.multiplexed_connection.send_packed_commands(
+            redis::Pipeline::new().del(key).del(key1),
+            0, 2
+        ).await?;
 
         redis_op.multiplexed_connection.send_packed_commands(
             redis::Pipeline::new().set(key, value).set(key1, value1),
