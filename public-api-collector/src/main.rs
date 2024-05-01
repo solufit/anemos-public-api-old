@@ -16,5 +16,6 @@ async fn main() {
     loop {
         interval.tick().await;
         abc().await;
+        crate::earthquake::collect_earthquake::collect_earthquake().await.unwrap();
     }
 }
