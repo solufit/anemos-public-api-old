@@ -21,9 +21,11 @@ pub async fn collect_earthquake() -> Result<(), Error> {
         .text()
         .await?;    
 
-    debug!("{}", response);
+    debug!("Recieved Response: {}", response);
 
-    let deserialized = serde_json::from_str::<ReturnEarthQuake>(&response)?;
+    let deserialized = serde_json::from_str::<ReturnEarthQuake>(&response).unwrap();
+
+    debug!("Converted: {:?}", deserialized);
 
 
     Ok(())
