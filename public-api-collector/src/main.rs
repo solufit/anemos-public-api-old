@@ -1,4 +1,3 @@
-mod get_env;
 mod earthquake;
 
 
