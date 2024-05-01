@@ -11,7 +11,7 @@
             "sourceLanguages": ["rust"],
             "env": {
                 "RUST_LOG" : "debug",
-                "RUST_BACKTRACE" : "1",
+                "RUST_BACKTRACE" : "full",
             }
         },
         {
@@ -24,10 +24,9 @@
             "sourceLanguages": ["rust"],
             "env": {
                 "RUST_LOG" : "debug",
-                "RUST_BACKTRACE" : "1",
+                "RUST_BACKTRACE" : "full",
                 "API_URL" : "http://anemos-commander",
             },
-            "preLaunchTask": "cd public-api-collector && cargo build"
         }
 
     ]
