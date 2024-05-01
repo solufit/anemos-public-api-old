@@ -3,7 +3,30 @@ use log::debug;
 use once_cell::sync::Lazy;
 use public_api_lib::scheme::earthquake::EarthQuake;
 
+/// Extracts the event ID from an EarthQuake struct.
+///
+/// # Arguments
+///
+/// * `earthquake` - The EarthQuake struct from which to extract the event ID.
+///
+/// # Returns
+///
+/// The event ID as a string.
+fn eventid_extractor(earthquake: &EarthQuake) -> String {
+    earthquake.Eventid.to_string()
+}
 
+/// Asynchronously collects earthquake data.
+///
+/// # Examples
+///
+/// ```rust
+/// # use anyhow::Result;
+/// # async fn example() -> Result<()> {
+///     earthquake_operator().await;
+///     Ok(())
+/// # }
+/// ```
 #[allow(clippy::unused_unit)]
 pub async fn earthquake_operator() {
 
@@ -26,7 +49,25 @@ pub async fn earthquake_operator() {
 
 }
 
-
+/// Collects earthquake data from the API.
+///
+/// # Returns
+///
+/// A vector of EarthQuake structs representing the collected earthquake data.
+///
+/// # Errors
+///
+/// Returns an error if there was a problem collecting the data or parsing the response.
+///
+/// # Examples
+///
+/// ```rust
+/// # use anyhow::Result;
+/// # async fn example() -> Result<()> {
+///     let earthquakes = collect_earthquake().await?;
+///     Ok(())
+/// # }
+/// ```
 pub async fn collect_earthquake() -> Result<Vec<public_api_lib::scheme::earthquake::EarthQuake>, Error> {
 
     static BASE_URL: Lazy<std::string::String> = Lazy::new(|| {
