@@ -4,9 +4,9 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
 pub struct IntensityStation {
-    Name: String,
-    Code: String,
-    Int: String,
+    pub Name: String,
+    pub Code: String,
+    pub Int: String,
 }
 
 
@@ -22,48 +22,48 @@ pub enum IntensityStationEnum {
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
 pub struct City {
-    Name: String,
-    Code: String,
-    MaxInt: String,
-    IntensityStation: Option<IntensityStationEnum>
+    pub Name: String,
+    pub Code: String,
+    pub MaxInt: String,
+    pub IntensityStation: Option<IntensityStationEnum>
 }
 
 /// Represents a Area
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
 pub struct Area {
-    Name: String,
-    Code: String,
-    MaxInt: String,
-    City: Option<Vec<City>>
+    pub Name: String,
+    pub Code: String,
+    pub MaxInt: String,
+    pub City: Option<Vec<City>>
 }
 
 /// Represents an intensity.
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
 pub struct Intensity {
-    Name: String,
-    Code: String,
-    MaxInt: String,
-    Area: Option<Vec<Area>>
+    pub Name: String,
+    pub Code: String,
+    pub MaxInt: String,
+    pub Area: Option<Vec<Area>>
 }
 
 /// Represents an earthquake.
 #[derive(Debug, Serialize, Deserialize)]
 #[allow(non_snake_case)]
 pub struct EarthQuake {
-    id: String,
-    Eventid: String,
-    EditorialOffice: String,
-    PublishingOffice: String,
-    Category: String,
-    Datetime: String,
-    Headline: String,
-    Hypocenter: String,
-    RegionCode: String,
-    MaxInt: String,
-    Magnitude: f64,
-    Intensity: Option<Vec<Intensity>>
+    pub id: String,
+    pub Eventid: String,
+    pub EditorialOffice: String,
+    pub PublishingOffice: String,
+    pub Category: String,
+    pub Datetime: String,
+    pub Headline: String,
+    pub Hypocenter: String,
+    pub RegionCode: String,
+    pub MaxInt: String,
+    pub Magnitude: f64,
+    pub Intensity: Option<Vec<Intensity>>
 }
 
 #[cfg(test)]
