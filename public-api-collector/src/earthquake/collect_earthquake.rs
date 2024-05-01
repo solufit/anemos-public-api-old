@@ -1,10 +1,11 @@
 use anyhow::{Error, Result};
 use log::debug;
 use once_cell::sync::Lazy;
-use public_api_lib::scheme::earthquake::{self, EarthQuake};
+use public_api_lib::scheme::earthquake::EarthQuake;
 
 
-pub async fn earthquake_operator() -> Result<(), Error> {
+#[allow(clippy::unused_unit)]
+pub async fn earthquake_operator() {
 
     let earthquakes_data: Vec<EarthQuake>;
 
@@ -14,14 +15,13 @@ pub async fn earthquake_operator() -> Result<(), Error> {
         },
         Err(e) => {
             log::error!("Error: {}", e);
-            return Ok(())
+            return ()
         }
         
     }
     debug!("Earthquake Data: {:?}", earthquakes_data);
     
 
-    Ok(())
 
 
 }
