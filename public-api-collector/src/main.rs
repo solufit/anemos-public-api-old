@@ -7,11 +7,6 @@ use std::vec;
 
 use tokio::time::{interval, Duration};
 
-async fn abc() {
-    // Your code here
-    log::info!("Run every 10s");
-}
-
 #[tokio::main]
 async fn main() {
     env_logger::init();
@@ -22,7 +17,6 @@ async fn main() {
     log::info!("Starting Data Collector for Anemos Public API Version: {}", env!("CARGO_PKG_VERSION"));
     loop {    
         let futures: Vec<Pin<Box<dyn Future<Output = ()> + Send>>> = vec![
-        Box::pin(abc()),
         Box::pin(crate::earthquake::collect_earthquake::earthquake_operator()),
     ];
         interval.tick().await;
