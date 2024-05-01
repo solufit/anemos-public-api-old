@@ -581,6 +581,21 @@ dependencies = [
  "hyper",
  "log",
  "once_cell",
+ "public-api-lib",
+ "redis",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "public-api-lib"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "env_logger",
+ "log",
+ "once_cell",
  "redis",
  "serde",
  "serde_json",
