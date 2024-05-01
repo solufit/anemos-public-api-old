@@ -2,10 +2,7 @@ use anyhow::{Result, Error};
 use log::debug;
 use once_cell::sync::Lazy;
 
-#[derive(Debug, serde::Deserialize, serde::Serialize)]
-struct ReturnEarthQuake{
-    earth_quake: Vec<public_api_lib::scheme::earthquake::EarthQuake>
-}
+
 
 
 pub async fn collect_earthquake() -> Result<(), Error> {
@@ -23,7 +20,7 @@ pub async fn collect_earthquake() -> Result<(), Error> {
 
     debug!("Recieved Response: {}", response);
 
-    let deserialized = serde_json::from_str::<ReturnEarthQuake>(&response).unwrap();
+    let deserialized : Vec<public_api_lib::scheme::earthquake::EarthQuake> = serde_json::from_str(&response).unwrap();
 
     debug!("Converted: {:?}", deserialized);
 
