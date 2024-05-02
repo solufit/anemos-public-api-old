@@ -1,5 +1,5 @@
 use std::fmt::format;
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use anyhow::{Ok, Result, Error};
 use futures::{task::waker, Future};
 use log::{debug, info};
@@ -42,6 +42,7 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
     // add to hashmap to check dubplicate
     // check if the event_id is already in the database
 
+    // get cached data
     let cmds: Vec<_> = earthquake.iter().map(|e| {
         let event_id = eventid_extractor(e);
         event_id_list.push(event_id.clone());
@@ -50,8 +51,10 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
 
     }).collect();
 
-    let results = futures::future::join_all(cmds).await
-            .into_iter().collect::<Result<Vec<String>>>()?;
+    let results : HashSet<String> = futures::future::join_all(cmds).await
+            .into_iter().collect::<Result<Vec<String>>>()?.into_iter().collect();
+
+    //check duplicates
 
 
     Ok(())
