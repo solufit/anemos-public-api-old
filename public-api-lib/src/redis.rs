@@ -4,9 +4,9 @@ use crate::get_env::PUBLIC_API_REDIS_HOST;
 
 /// Represents a Redis operation.
 pub struct redisOperation {
-    client: redis::Client,
-    con: redis::Connection,
-    multiplexed_connection: redis::aio::MultiplexedConnection
+    pub client: redis::Client,
+    pub con: redis::Connection,
+    pub multiplexed_connection: redis::aio::MultiplexedConnection
 }
 
 impl redisOperation {
