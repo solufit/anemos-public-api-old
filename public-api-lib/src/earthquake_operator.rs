@@ -1,11 +1,9 @@
-use std::fmt::format;
 use std::collections::{HashMap, HashSet};
 use anyhow::{Ok, Result, Error};
-use futures::{task::waker, Future};
 use log::{debug, info};
 use crate::scheme::earthquake::EarthQuake;
 use crate::redis::redisOperation;
-use redis::{Pipeline, Cmd};
+use redis::Cmd;
 
 /// Extracts the event ID from an EarthQuake struct.
 ///
@@ -33,7 +31,6 @@ async fn get_from_redis(event_id: String) -> Result<String, Error> {
 async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), Error> {
     // Submit the data to the API
 
-    let mut redis_op = redisOperation::new().await?;
     let mut event_id_list: Vec<String> = Vec::new();
     let mut hash_earthquake: HashMap<String, &EarthQuake> = HashMap::new();
 
@@ -55,6 +52,8 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
             .into_iter().collect::<Result<Vec<String>>>()?.into_iter().collect();
 
     //check duplicates
+
+
 
 
     Ok(())
