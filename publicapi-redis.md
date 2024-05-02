@@ -12,7 +12,7 @@ EarthQuake eventid_list
 
 ## key earthquake-detail-{event-id}
 
-expire 24 hours
+expire 48 hours
 
 EarthQuake Details
 

@@ -123,7 +123,7 @@ mod tests {
 
         // Read the value from Redis
         let result_value = redis_op.multiplexed_connection.send_packed_commands(
-            redis::Pipeline::new().get(key).get(key1),
+            redis::Pipeline::new().get(key).get("わたしなーくーわ"),
             0, 2
         ).await?;
 

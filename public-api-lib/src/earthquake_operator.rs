@@ -39,6 +39,16 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
         pipe.get(format!("earthquake-detail-{}", event_id));
         hash_earthquake.insert(event_id, e);
     });
+    
+
+    // get cached data 
+
+    let command_num = pipe.cmd_iter().count();
+
+    let result = redis_op.multiplexed_connection
+                .send_packed_commands(&pipe, 0, command_num).await;
+
+
 
     Ok(())
 }
