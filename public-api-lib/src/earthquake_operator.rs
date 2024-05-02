@@ -56,8 +56,16 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
             .collect();
 
     //remove duplicates
+    let event_id_list: Vec<String> = event_id_list.into_iter().filter(
+        
+            |x| if results.contains(x) {
+                //remove duplicate from hash_earthquake
+                hash_earthquake.remove(x);
+                false
+            } else {true}
+        
+    ).collect();
     
-    //let event_id_list = event_id_list.
 
 
     Ok(())
