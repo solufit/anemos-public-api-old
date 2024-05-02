@@ -49,11 +49,15 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
     }).collect();
 
     let results : HashSet<String> = futures::future::join_all(cmds).await
-            .into_iter().collect::<Result<Vec<String>>>()?.into_iter().collect();
+            .into_iter().collect::<Result<Vec<String>>>()?
+            //filter out empty string
+            .into_iter().filter(|x| x != &" ".to_string())
+            //collect to HashSet
+            .collect();
 
-    //check duplicates
-
-
+    //remove duplicates
+    
+    //let event_id_list = event_id_list.
 
 
     Ok(())
