@@ -19,7 +19,20 @@ fn eventid_extractor(earthquake: &EarthQuake) -> String {
     earthquake.Eventid.to_string()
 }
 
-
+/// Return the earthquake data future treat from the Redis cache.
+/// 
+/// # Arguments
+/// 
+/// * `event_id` - The event ID of the earthquake.
+/// 
+/// # Returns
+/// 
+/// The earthquake future 
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
 async fn get_from_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
