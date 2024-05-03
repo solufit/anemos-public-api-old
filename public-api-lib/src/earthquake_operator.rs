@@ -42,6 +42,16 @@ async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Erro
         .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
     Ok(result)
 }
+async fn push_event_detail_to_redis(event: EarthQuake, event_id: String) -> Result<String, Error> {
+    let mut redis_op = redisOperation::new().await?;
+
+    //convert EarthQuake to json strings
+    let event = eventid_extractor(&event);
+
+    let result = Cmd::set_ex(format!("earthquake-detail-{}", event_id), event, 3600 * 24 * 2)
+        .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
+    Ok(result)
+}
 
 async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), Error> {
     // Submit the data to the API
