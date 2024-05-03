@@ -92,6 +92,27 @@ async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Erro
         .query_async(&mut redis_op.multiplexed_connection).await?;
     Ok(result)
 }
+
+/// Push the event detail to the Redis cache.
+/// 
+/// # Arguments
+/// 
+/// * `event` - The EarthQuake struct of the earthquake.
+/// 
+/// * `event_id` - The event ID of the earthquake.
+/// 
+/// # Returns
+/// 
+/// return async future.
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The event detail is stored in the Redis cache for two days.
+/// 
 async fn push_event_detail_to_redis(event: &EarthQuake, event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
