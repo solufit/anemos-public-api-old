@@ -35,6 +35,14 @@ async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Err
     Ok(result)
 }
 
+async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Error> {
+    let mut redis_op = redisOperation::new().await?;
+
+    let result = Cmd::set_ex(format!("earthquakee-expire-day-{}", event_id), event_id, 3600 * 24)
+        .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
+    Ok(result)
+}
+
 async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), Error> {
     // Submit the data to the API
 
@@ -74,9 +82,17 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
     ).collect();
 
     //push to redis
+
+    //create tasks
     let cmds: Vec<_> = event_id_list.iter().map(|e| {
         push_event_list_hourly_to_redis(e.to_string())
     }).collect();
+
+    let cmd1: Vec<_> = event_id_list.iter().map(|e| {
+        push_event_list_daily_to_redis(e.to_string())
+    }).collect();
+
+    
     
 
 
