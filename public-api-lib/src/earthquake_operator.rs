@@ -67,6 +67,24 @@ async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Err
     Ok(result)
 }
 
+/// Push the event list daily to the Redis cache.
+/// 
+/// # Arguments
+/// 
+/// * `event_id` - The event ID of the earthquake.
+/// 
+/// # Returns
+/// 
+/// return async future.
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The event list is stored in the Redis cache for one day.
+/// 
 async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
