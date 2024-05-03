@@ -42,7 +42,7 @@ async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Erro
         .query_async(&mut redis_op.multiplexed_connection).await?;
     Ok(result)
 }
-async fn push_event_detail_to_redis(event: EarthQuake, event_id: String) -> Result<String, Error> {
+async fn push_event_detail_to_redis(event: &EarthQuake, event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
     //convert EarthQuake to json strings
@@ -100,11 +100,16 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
 
     let cmd1: Vec<_> = event_id_list.iter().map(|e| {
         push_event_list_daily_to_redis(e.to_string())
-    }).collect();
+    }).collect::<Vec<_>>();
 
-    
-    
+    let cmd2: Vec<_> = event_id_list.iter().map(|e| {
+        push_event_detail_to_redis(hash_earthquake.get(e).unwrap(), e.to_string())
+    }).collect::<Vec<_>>();
 
+    //join all tasks
+    futures::future::try_join_all(cmds).await?;
+    futures::future::try_join_all(cmd1).await?;
+    futures::future::try_join_all(cmd2).await?;
 
     Ok(())
 }
