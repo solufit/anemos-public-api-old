@@ -30,7 +30,7 @@ async fn get_from_redis(event_id: String) -> Result<String, Error> {
 async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result = Cmd::set_ex(format!("earthquakee-expire-hour-{}", event_id), event_id, 3600)
+    let result = Cmd::set_ex(format!("earthquake-expire-hour-{}", event_id), event_id, 3600)
         .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
     Ok(result)
 }
@@ -38,7 +38,7 @@ async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Err
 async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result = Cmd::set_ex(format!("earthquakee-expire-day-{}", event_id), event_id, 3600 * 24)
+    let result = Cmd::set_ex(format!("earthquake-expire-day-{}", event_id), event_id, 3600 * 24)
         .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
     Ok(result)
 }
