@@ -40,6 +40,25 @@ async fn get_from_redis(event_id: String) -> Result<String, Error> {
         .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
     Ok(result)
 }
+
+/// Push the event list hourly to the Redis cache.
+/// 
+/// # Arguments
+/// 
+/// * `event_id` - The event ID of the earthquake.
+/// 
+/// # Returns
+/// 
+/// return async future.
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The event list is stored in the Redis cache for one hour.
+/// 
 async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
