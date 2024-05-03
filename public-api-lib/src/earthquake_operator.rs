@@ -124,6 +124,26 @@ async fn push_event_detail_to_redis(event: &EarthQuake, event_id: String) -> Res
     Ok(result)
 }
 
+/// Submits the earthquake data to the API.
+/// 
+/// # Arguments
+/// 
+/// * `earthquake` - The EarthQuake struct of the earthquake.
+/// 
+/// # Returns
+/// 
+/// return async future.
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The earthquake data is submitted to the API.
+/// 
+/// The event list is stored in the Redis cache for one hour or one day.
+/// 
 async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), Error> {
     // Submit the data to the API
 
