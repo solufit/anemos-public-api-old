@@ -85,16 +85,16 @@ async fn push_event_hourly_to_redis(event_id: String) -> Result<String, Error> {
 /// 
 /// The event list is stored in the Redis cache for one hour.
 /// 
-async fn push_event_list_hourly_to_redis(event_id: Vec<String>) -> Result<String, Error> {
+async fn push_event_list_hourly_to_redis(event_id: Vec<String>) -> Result<(), Error> {
     let mut redis_op = redisOperation::new().await?;
 
     //delete exists
     Cmd::del("earthquake_eventid_hour")
         .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
 
-    let result = Cmd::lpush("earthquake_eventid_hour", event_id)
+    let result: i32 = Cmd::lpush("earthquake_eventid_hour", event_id)
         .query_async(&mut redis_op.multiplexed_connection).await?;
-    Ok(result)
+    Ok(())
 }
 
 /// Push the event list daily to the Redis cache.
@@ -284,7 +284,7 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
 pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result: Vec<String> = Cmd::get("earthquake-eventid-hour")
+    let result: Vec<String> = Cmd::get("earthquake_eventid_hour")
         .query_async(&mut redis_op.multiplexed_connection).await?;
 
     Ok(result)
