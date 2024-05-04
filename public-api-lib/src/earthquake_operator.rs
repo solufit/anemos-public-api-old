@@ -225,7 +225,7 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
 pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result: Vec<String> = Cmd::get("earthquake-trend-hour")
+    let result: Vec<String> = Cmd::get("earthquake-eventid-hour")
         .query_async(&mut redis_op.multiplexed_connection).await?;
 
     Ok(result)
