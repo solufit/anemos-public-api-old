@@ -168,7 +168,7 @@ async fn push_event_detail_to_redis(event: &EarthQuake, event_id: String) -> Res
     let mut redis_op = redisOperation::new().await?;
 
     //convert EarthQuake to json strings
-    let event = eventid_extractor(event);
+    let event = serde_json::to_string(event).unwrap();
 
     let result = Cmd::set_ex(format!("earthquake-detail-{}", event_id), event, 3600 * 24 * 2)
         .query_async(&mut redis_op.multiplexed_connection).await?;
