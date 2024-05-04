@@ -232,6 +232,32 @@ pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
 
 }
 
+///
+/// Get the earthquake trend for the hour.
+/// 
+/// # Returns
+/// 
+/// return EventID List
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The earthquake trend is stored in the Redis cache.
+/// 
+/// The event list is stored in the Redis cache for one hour.
+/// 
+pub async fn get_earthquake_trend_day() -> Result<Vec<String>, Error> {
+    let mut redis_op = redisOperation::new().await?;
+
+    let result: Vec<String> = Cmd::get("earthquake-eventid-day")
+        .query_async(&mut redis_op.multiplexed_connection).await?;
+
+    Ok(result)
+
+}
 #[cfg(test)]
 mod tests {
     use super::*;
