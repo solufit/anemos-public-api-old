@@ -360,6 +360,15 @@ mod tests {
         }
 
         #[tokio::test]
+        async fn test_get_earthquake_trend_hour() {
+            // Call the get_earthquake_trend_day function
+            let result = get_earthquake_trend_hour().await;
+
+            // Assert that the function returns Ok
+            assert!(result.is_ok());
+        }
+
+        #[tokio::test]
         async fn test_get_earthquake_trend_day() {
             // Call the get_earthquake_trend_day function
             let result = get_earthquake_trend_day().await;
