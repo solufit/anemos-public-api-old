@@ -119,10 +119,10 @@ async fn push_event_list_daily_to_redis(event_id: Vec<String>) -> Result<(), Err
     let mut redis_op = redisOperation::new().await?;
 
     //delete exists
-    Cmd::del("earthquake_eventid_daily")
+    Cmd::del("earthquake_eventid_day")
         .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
 
-    Cmd::lpush("earthquake_eventid_daily", event_id)
+    Cmd::lpush("earthquake_eventid_day", event_id)
         .query_async(&mut redis_op.multiplexed_connection).await?;
     Ok(())
 }
@@ -284,7 +284,7 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
 pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result: Vec<_> = Cmd::lrange("earthquake_eventid_hour", 0, -1)
+    let result: Vec<String> = Cmd::lrange("earthquake_eventid_hour", 0, -1)
         .query_async(&mut redis_op.multiplexed_connection).await?;
 
     Ok(result)
@@ -311,7 +311,7 @@ pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
 pub async fn get_earthquake_trend_day() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result: Vec<_> = Cmd::get("earthquake-eventid-day")
+    let result: Vec<String> = Cmd::lrange("earthquake_eventid_day", 0, -1)
         .query_async(&mut redis_op.multiplexed_connection).await?;
 
     Ok(result)
