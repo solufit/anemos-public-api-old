@@ -207,14 +207,42 @@ async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), E
 
 
 
+
 #[cfg(test)]
 mod tests {
     use super::*;
 
+    #[tokio::test]
+    async fn test_earthquake_data_submitter() {
+        // Create a sample earthquake data
+        let earthquake_sample_a= 
+            EarthQuake {
+                Eventid: "12345".to_string(),
+                id: "id".to_string(),
+                EditorialOffice: "EditorialOffice".to_string(),
+                PublishingOffice: "PublishingOffice".to_string(),
+                Category: "Category".to_string(),
+                Datetime: "Datetime".to_string(),
+                Headline: "Headline".to_string(),
+                Hypocenter: "Hypocenter".to_string(),
+                RegionCode: "RegionCode".to_string(),
+                MaxInt: "MaxInt".to_string(),
+                Magnitude: 1.0,
+                Intensity: None,
+            };
+       
+
+        // Call the earthquake_data_submitter function
+        //let result = earthquake_data_submitter(&earthquake).await;
+
+        // Assert that the function returns Ok(())
+        //assert!(result.is_ok());
+    }
+
     #[test]
     fn test_eventid_extractor() {
         let earthquake = EarthQuake {
-            Eventid: 12345.to_string(),
+            Eventid: "12345".to_string(),
             id: "id".to_string(),
             EditorialOffice: "EditorialOffice".to_string(),
             PublishingOffice: "PublishingOffice".to_string(),
@@ -226,8 +254,6 @@ mod tests {
             MaxInt: "MaxInt".to_string(),
             Magnitude: 1.0,
             Intensity: None,
-
-            
         };
 
         let event_id = eventid_extractor(&earthquake);
