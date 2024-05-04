@@ -233,6 +233,8 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
         
     ).collect();
 
+    info!("New EarthQuake Info Count: {}", event_id_list.len());
+
     //push to redis
 
     //create tasks
