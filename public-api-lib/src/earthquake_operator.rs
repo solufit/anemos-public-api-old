@@ -380,8 +380,22 @@ mod tests {
         #[tokio::test]
         async fn test_earthquake_data_submitter() {
             // Create a sample earthquake data
-            let earthquake_sample_a = EarthQuake {
-                Eventid: "12345".to_string(),
+            let earthquake_sample_before = EarthQuake {
+                Eventid: "before".to_string(),
+                id: "id".to_string(),
+                EditorialOffice: "EditorialOffice".to_string(),
+                PublishingOffice: "PublishingOffice".to_string(),
+                Category: "Category".to_string(),
+                Datetime: "Datetime".to_string(),
+                Headline: "Headline".to_string(),
+                Hypocenter: "Hypocenter".to_string(),
+                RegionCode: "RegionCode".to_string(),
+                MaxInt: "MaxInt".to_string(),
+                Magnitude: 1.0,
+                Intensity: None,
+            };
+            let earthquake_sample_after = EarthQuake {
+                Eventid: "after".to_string(),
                 id: "id".to_string(),
                 EditorialOffice: "EditorialOffice".to_string(),
                 PublishingOffice: "PublishingOffice".to_string(),
@@ -395,11 +409,38 @@ mod tests {
                 Intensity: None,
             };
 
-            // Call the earthquake_data_submitter function
-            //test_earthquake_data_submitter()let result = earthquake_data_submitter(&earthquake_sample_a).await;
+            let mut event_id_list: Vec<String> = vec!["before".to_string(), "after".to_string()];
+            event_id_list.sort();
 
-            // Assert that the function returns Ok(())
-            //assert!(result.is_ok());
+            let mut redis_op = redisOperation::new().await.unwrap();
+
+            // prepare data
+            push_event_daily_to_redis("before".to_string()).await.unwrap();
+            push_event_hourly_to_redis("before".to_string()).await.unwrap();
+            push_event_detail_to_redis(&earthquake_sample_before, "before".to_string()).await.unwrap();
+
+            // Call the earthquake_data_submitter function
+            let _ = earthquake_data_submitter(&[earthquake_sample_before.clone(), earthquake_sample_after.clone()]).await;
+
+            // check execute success
+            let result_before = get_from_redis("before".to_string()).await.unwrap();
+            let result_after = get_from_redis("after".to_string()).await.unwrap();
+            let mut result_list_hourly = get_earthquake_trend_hour().await.unwrap();
+            result_list_hourly.sort();
+            let mut result_list_daily = get_earthquake_trend_day().await.unwrap();
+            result_list_daily.sort();
+
+            // Assert that the function returns Ok
+            assert_eq!(result_before, serde_json::to_string(&earthquake_sample_before).unwrap());
+            assert_eq!(result_after, serde_json::to_string(&earthquake_sample_after).unwrap());
+            assert_eq!(result_list_hourly, event_id_list);
+            assert_eq!(result_list_daily, event_id_list);
+
+           
+            // clean redis
+            let _ : () = redis::cmd("flushall").query(&mut redis_op.con).unwrap();
+
+
         }
 
     #[test]
