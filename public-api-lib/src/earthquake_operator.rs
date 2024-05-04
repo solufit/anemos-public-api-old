@@ -101,6 +101,35 @@ async fn push_event_list_hourly_to_redis(event_id: Vec<String>) -> Result<String
 /// 
 /// # Arguments
 /// 
+/// * `event_id` - The event ID List of the earthquake.
+/// 
+/// # Returns
+/// 
+/// return async future.
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The event list is stored in the Redis cache for one hour.
+/// 
+async fn push_event_list_daily_to_redis(event_id: Vec<String>) -> Result<String, Error> {
+    let mut redis_op = redisOperation::new().await?;
+
+    //delete exists
+    Cmd::del("earthquake_eventid_daily")
+        .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
+
+    let result = Cmd::lpush("earthquake_eventid_daily", event_id)
+        .query_async(&mut redis_op.multiplexed_connection).await?;
+    Ok(result)
+}
+/// Push the event list daily to the Redis cache.
+/// 
+/// # Arguments
+/// 
 /// * `event_id` - The event ID of the earthquake.
 /// 
 /// # Returns
