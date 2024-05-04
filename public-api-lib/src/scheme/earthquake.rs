@@ -14,8 +14,9 @@ pub struct IntensityStation {
 #[allow(non_snake_case)]
 #[serde(untagged)]
 pub enum IntensityStationEnum {
+    IntensityStationVec(Vec<IntensityStation>),
     IntensityStation(IntensityStation),
-    IntensityStationVec(Vec<IntensityStation>)
+
 }
 
 /// Represents a city.

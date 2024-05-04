@@ -12,6 +12,7 @@
             "env": {
                 "RUST_LOG" : "debug",
                 "RUST_BACKTRACE" : "full",
+                "PUBLIC_API_REDIS_HOST": "anemos-public-redis-dev"
             }
         },
         {
@@ -26,6 +27,7 @@
                 "RUST_LOG" : "debug",
                 "RUST_BACKTRACE" : "full",
                 "API_URL" : "http://anemos-commander",
+                "PUBLIC_API_REDIS_HOST": "anemos-public-redis-dev"
             },
         }
 

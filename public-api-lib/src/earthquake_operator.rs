@@ -201,7 +201,6 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
     let mut event_id_list: Vec<String> = Vec::new();
     let mut hash_earthquake: HashMap<String, &EarthQuake> = HashMap::new();
 
-    debug!("earthquake_data_id: {:?}", eventid_extractor(&earthquake[0]));
 
     // add to hashmap to check dubplicate
     // check if the event_id is already in the database

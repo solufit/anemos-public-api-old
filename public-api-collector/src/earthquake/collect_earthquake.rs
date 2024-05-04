@@ -22,6 +22,19 @@ pub async fn earthquake_operator() {
     match collect_earthquake().await {
         Ok(earthquakes) => {
             earthquakes_data = earthquakes;
+
+
+            match public_api_lib::earthquake_operator::earthquake_data_submitter(&earthquakes_data).await {
+                Ok(_) => {
+                    log::info!("Earthquake Data Submitted Successfully");
+                },
+                Err(e) => {
+                    log::error!("Error: {}", e);
+                    return ();
+                }
+            }
+
+
         },
         Err(e) => {
             log::error!("Error: {}", e);
@@ -70,7 +83,7 @@ pub async fn collect_earthquake() -> Result<Vec<public_api_lib::scheme::earthqua
 
     debug!("Recieved Response: {}", response);
 
-    let deserialized : Vec<public_api_lib::scheme::earthquake::EarthQuake> = serde_json::from_str(&response).unwrap();
+    let deserialized : Vec<public_api_lib::scheme::earthquake::EarthQuake> = serde_json::from_str(&response)?;
 
     debug!("Converted: {:?}", deserialized);
 
