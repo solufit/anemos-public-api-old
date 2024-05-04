@@ -343,6 +343,28 @@ mod tests {
         }
 
         #[tokio::test]
+        async fn test_earthquake_trend_daily() -> Result<(), Error> {
+            // push event list to redis
+            push_event_list_daily_to_redis(
+                vec!["12345".to_string(), "12346".to_string()]
+            ).await.unwrap();
+            // Call the get_earthquake_trend_daily function
+            let mut result = get_earthquake_trend_day().await?;
+
+            result.sort();
+
+            // Assert that the function returns Ok
+            assert_eq!(result, vec!["12345".to_string(), "12346".to_string()]);
+
+            //delete exists
+            let mut redis_op = redisOperation::new().await.unwrap();
+            let _ : () = redis::cmd("flushall").query(&mut redis_op.con).unwrap();
+            
+            return Ok(());
+
+        }
+
+        #[tokio::test]
         async fn test_get_earthquake_trend_day() {
             // Call the get_earthquake_trend_day function
             let result = get_earthquake_trend_day().await;
