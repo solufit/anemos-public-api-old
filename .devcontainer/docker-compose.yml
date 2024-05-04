@@ -16,7 +16,7 @@ services:
       RUST_LOG: "debug"
       RUST_BACKTRACE: "full"
       API_URL: "http://anemos-commander"
-      PUBLIC-API-REDIS_HOST: "anemos-public-redis-dev"
+      PUBLIC_API_REDIS_HOST: "anemos-public-redis-dev"
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     networks:
