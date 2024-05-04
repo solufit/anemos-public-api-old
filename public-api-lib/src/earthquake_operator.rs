@@ -261,6 +261,9 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
     futures::future::try_join_all(cmd1).await?;
     futures::future::try_join_all(cmd2).await?;
 
+    push_event_list_daily_to_redis(event_id_list.clone()).await?;
+    push_event_list_hourly_to_redis(event_id_list.clone()).await?;
+
     Ok(())
 }
 
