@@ -320,12 +320,28 @@ pub async fn get_earthquake_trend_day() -> Result<Vec<String>, Error> {
 #[cfg(test)]
 mod tests {
     use super::*;
+        #[tokio::test]
+        async fn test_get_earthquake_trend_hour() {
+            // Call the get_earthquake_trend_hour function
+            let result = get_earthquake_trend_hour().await;
 
-    #[tokio::test]
-    async fn test_earthquake_data_submitter() {
-        // Create a sample earthquake data
-        let earthquake_sample_a= 
-            EarthQuake {
+            // Assert that the function returns Ok
+            assert!(result.is_ok());
+        }
+
+        #[tokio::test]
+        async fn test_get_earthquake_trend_day() {
+            // Call the get_earthquake_trend_day function
+            let result = get_earthquake_trend_day().await;
+
+            // Assert that the function returns Ok
+            assert!(result.is_ok());
+        }
+
+        #[tokio::test]
+        async fn test_earthquake_data_submitter() {
+            // Create a sample earthquake data
+            let earthquake_sample_a = EarthQuake {
                 Eventid: "12345".to_string(),
                 id: "id".to_string(),
                 EditorialOffice: "EditorialOffice".to_string(),
@@ -339,14 +355,13 @@ mod tests {
                 Magnitude: 1.0,
                 Intensity: None,
             };
-       
 
-        // Call the earthquake_data_submitter function
-        //let result = earthquake_data_submitter(&earthquake).await;
+            // Call the earthquake_data_submitter function
+            //test_earthquake_data_submitter()let result = earthquake_data_submitter(&earthquake_sample_a).await;
 
-        // Assert that the function returns Ok(())
-        //assert!(result.is_ok());
-    }
+            // Assert that the function returns Ok(())
+            //assert!(result.is_ok());
+        }
 
     #[test]
     fn test_eventid_extractor() {
