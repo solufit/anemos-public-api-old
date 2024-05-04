@@ -321,12 +321,23 @@ pub async fn get_earthquake_trend_day() -> Result<Vec<String>, Error> {
 mod tests {
     use super::*;
         #[tokio::test]
-        async fn test_get_earthquake_trend_hour() {
+        async fn test_earthquake_trend_hour() -> Result<(), Error> {
+            // push event list to redis
+            push_event_list_hourly_to_redis(
+                vec!["12345".to_string(), "12346".to_string()]
+            ).await.unwrap();
             // Call the get_earthquake_trend_hour function
-            let result = get_earthquake_trend_hour().await;
+            let result = get_earthquake_trend_hour().await?;
 
             // Assert that the function returns Ok
-            assert!(result.is_ok());
+            assert_eq!(result, vec!["12345".to_string(), "12346".to_string()]);
+
+            //delete exists
+            let mut redis_op = redisOperation::new().await.unwrap();
+            let _ : () = redis::cmd("SET").arg("my_key").arg(42).query(&mut redis_op.con).unwrap();
+            
+            return Ok(());
+
         }
 
         #[tokio::test]
