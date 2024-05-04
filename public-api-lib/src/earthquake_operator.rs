@@ -205,6 +205,23 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
     Ok(())
 }
 
+///
+/// Get the earthquake trend for the hour.
+/// 
+/// # Returns
+/// 
+/// return EventID List
+/// 
+/// # Errors
+/// 
+/// Returns an error if the Redis operation fails.
+/// 
+/// # Remarks
+/// 
+/// The earthquake trend is stored in the Redis cache.
+/// 
+/// The event list is stored in the Redis cache for one hour.
+/// 
 pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
