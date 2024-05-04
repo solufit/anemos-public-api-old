@@ -144,7 +144,7 @@ async fn push_event_detail_to_redis(event: &EarthQuake, event_id: String) -> Res
 /// 
 /// The event list is stored in the Redis cache for one hour or one day.
 /// 
-async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), Error> {
+pub async fn earthquake_data_submitter(earthquake: &Vec<EarthQuake>) -> Result<(), Error> {
     // Submit the data to the API
 
     let mut event_id_list: Vec<String> = Vec::new();
