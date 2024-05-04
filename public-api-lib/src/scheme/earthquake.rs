@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 /// Represents an intensity station.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[allow(non_snake_case)]
 pub struct IntensityStation {
     pub Name: String,
@@ -10,7 +10,7 @@ pub struct IntensityStation {
 }
 
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[allow(non_snake_case)]
 #[serde(untagged)]
 pub enum IntensityStationEnum {
@@ -19,7 +19,7 @@ pub enum IntensityStationEnum {
 }
 
 /// Represents a city.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[allow(non_snake_case)]
 pub struct City {
     pub Name: String,
@@ -29,7 +29,7 @@ pub struct City {
 }
 
 /// Represents a Area
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[allow(non_snake_case)]
 pub struct Area {
     pub Name: String,
@@ -39,7 +39,7 @@ pub struct Area {
 }
 
 /// Represents an intensity.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[allow(non_snake_case)]
 pub struct Intensity {
     pub Name: String,
@@ -49,7 +49,7 @@ pub struct Intensity {
 }
 
 /// Represents an earthquake.
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[allow(non_snake_case)]
 pub struct EarthQuake {
     pub id: String,
