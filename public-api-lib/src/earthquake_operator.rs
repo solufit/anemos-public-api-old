@@ -118,10 +118,6 @@ async fn push_event_list_hourly_to_redis(event_id: Vec<String>) -> Result<(), Er
 async fn push_event_list_daily_to_redis(event_id: Vec<String>) -> Result<(), Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    //delete exists
-    Cmd::del("earthquake_eventid_day")
-        .query_async(&mut redis_op.multiplexed_connection).await.unwrap_or("".to_string());
-
     Cmd::lpush("earthquake_eventid_day", event_id)
         .query_async(&mut redis_op.multiplexed_connection).await?;
     Ok(())
