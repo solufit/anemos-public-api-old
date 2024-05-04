@@ -284,7 +284,7 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
 pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result: Vec<String> = Cmd::get("earthquake_eventid_hour")
+    let result: Vec<_> = Cmd::lrange("earthquake_eventid_hour", 0, -1)
         .query_async(&mut redis_op.multiplexed_connection).await?;
 
     Ok(result)
@@ -311,7 +311,7 @@ pub async fn get_earthquake_trend_hour() -> Result<Vec<String>, Error> {
 pub async fn get_earthquake_trend_day() -> Result<Vec<String>, Error> {
     let mut redis_op = redisOperation::new().await?;
 
-    let result: Vec<String> = Cmd::get("earthquake-eventid-day")
+    let result: Vec<_> = Cmd::get("earthquake-eventid-day")
         .query_async(&mut redis_op.multiplexed_connection).await?;
 
     Ok(result)
@@ -327,14 +327,16 @@ mod tests {
                 vec!["12345".to_string(), "12346".to_string()]
             ).await.unwrap();
             // Call the get_earthquake_trend_hour function
-            let result = get_earthquake_trend_hour().await?;
+            let mut result = get_earthquake_trend_hour().await?;
+
+            result.sort();
 
             // Assert that the function returns Ok
             assert_eq!(result, vec!["12345".to_string(), "12346".to_string()]);
 
             //delete exists
             let mut redis_op = redisOperation::new().await.unwrap();
-            let _ : () = redis::cmd("SET").arg("my_key").arg(42).query(&mut redis_op.con).unwrap();
+            let _ : () = redis::cmd("flushall").query(&mut redis_op.con).unwrap();
             
             return Ok(());
 
