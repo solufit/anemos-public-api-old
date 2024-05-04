@@ -59,7 +59,7 @@ async fn get_from_redis(event_id: String) -> Result<String, Error> {
 /// 
 /// The event list is stored in the Redis cache for one hour.
 /// 
-async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Error> {
+async fn push_event_hourly_to_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
     let result = Cmd::set_ex(format!("earthquake-expire-hour-{}", event_id), event_id, 3600)
@@ -85,7 +85,7 @@ async fn push_event_list_hourly_to_redis(event_id: String) -> Result<String, Err
 /// 
 /// The event list is stored in the Redis cache for one day.
 /// 
-async fn push_event_list_daily_to_redis(event_id: String) -> Result<String, Error> {
+async fn push_event_daily_to_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
     let result = Cmd::set_ex(format!("earthquake-expire-day-{}", event_id), event_id, 3600 * 24)
@@ -186,11 +186,11 @@ pub async fn earthquake_data_submitter(earthquake: &[EarthQuake]) -> Result<(), 
 
     //create tasks
     let cmds: Vec<_> = event_id_list.iter().map(|e| {
-        push_event_list_hourly_to_redis(e.to_string())
+        push_event_hourly_to_redis(e.to_string())
     }).collect();
 
     let cmd1: Vec<_> = event_id_list.iter().map(|e| {
-        push_event_list_daily_to_redis(e.to_string())
+        push_event_daily_to_redis(e.to_string())
     }).collect::<Vec<_>>();
 
     let cmd2: Vec<_> = event_id_list.iter().map(|e| {
