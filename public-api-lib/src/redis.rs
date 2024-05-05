@@ -3,6 +3,7 @@ use anyhow::{Ok, Result, Error};
 use crate::get_env::PUBLIC_API_REDIS_HOST;
 
 /// Represents a Redis operation.
+#[allow(non_camel_case_types)]
 pub struct redisOperation {
     pub client: redis::Client,
     pub con: redis::Connection,
