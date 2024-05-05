@@ -13,6 +13,11 @@ pub struct EarthQuakeEventIDList {
     pub event_ids: Vec<String>,
 }
 
+#[derive(Deserialize, Serialize, Debug, ToSchema)]
+pub struct NotFound {
+    pub msg: String
+}
+
 /// Retrieves the earthquake eventids in hours.
 /// 
 /// # Returns
@@ -113,14 +118,24 @@ pub async fn earthquake_eventids_daily() -> impl Responder {
     HttpResponse::Ok().json(response)
 }
 
-
-pub async fn get_earthquake_detail(event_id: &str) -> impl Responder {
+#[utoipa::path(
+    get,
+    responses(
+        (status = 200, description = "Earthquake Detail", body = public_api_lib::scheme::earthquake::EarthQuake),
+        (status = 404, description = "Not Found", body = NotFound)
+    )
+)]
+#[get("/v1/earthquake/{event_id}")]
+pub async fn get_earthquake_detail(event_id: String) -> impl Responder {
 
     let get_event: String = match public_api_lib::earthquake_operator::get_from_redis(event_id.to_string()).await {
         Ok(event) => event,
         Err(e) => {
             log::error!("Failed to get earthquake detail: {:?}", e);
-            return HttpResponse::InternalServerError().finish();
+            let response = NotFound {
+                msg: "Specified eventid was not found.".to_string()
+            };
+            return HttpResponse::NotFound().json(response)
         }
     };        
 
