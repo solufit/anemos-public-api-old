@@ -46,8 +46,12 @@ spec:
         ports:
         - containerPort: 8080
         env:
-        - name: SYSTEM
-          value: DEVELOP
+        - name: RUST_LOG
+          value: info
+        - name: API_URL
+          value: http://0.0.0.0
+        - name: PUBLIC_API_REDIS_HOST
+          value: solufit-redis-replicas
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -68,8 +72,12 @@ spec:
       - name: anemos-public-api-collector
         image: solufit.azurecr.io/anemos-public-api-collector
         env:
-        - name: SYSTEM
-          value: DEVELOP
+        - name: RUST_LOG
+          value: info
+        - name: API_URL
+          value: http://0.0.0.0
+        - name: PUBLIC_API_REDIS_HOST
+          value: solufit-redis-master
 ---
 apiVersion: v1
 kind: Service
@@ -79,7 +87,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: my-app
+    app: anemos-public-api
   ports:
   - protocol: TCP
     port: 80
