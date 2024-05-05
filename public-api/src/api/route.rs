@@ -20,6 +20,7 @@ pub fn config(cfg: &mut web::ServiceConfig) {
     )
     .service(super::versions::versions)
     .service(super::earthquake::earthquake_eventids_hourly)
+    .service(super::earthquake::earthquake_eventids_daily)
     .default_service(
         web::route().to(route_unmatch)
     );
