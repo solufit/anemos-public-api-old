@@ -14,12 +14,22 @@ use super::versions;
     paths(
         versions::versions,
         earthquake::earthquake_eventids_hourly,
-        earthquake::earthquake_eventids_daily
+        earthquake::earthquake_eventids_daily,
+        earthquake::get_earthquake_detail
     ),
     components(
         schemas(
             versions::VersionResponse,
-            earthquake::EarthQuakeEventIDList
+            earthquake::EarthQuakeEventIDList,
+            earthquake::NotFound,
+            public_api_lib::scheme::earthquake::EarthQuake,
+            public_api_lib::scheme::earthquake::Intensity,
+            public_api_lib::scheme::earthquake::Area,
+            public_api_lib::scheme::earthquake::City,
+            public_api_lib::scheme::earthquake::IntensityStationEnum,
+            public_api_lib::scheme::earthquake::IntensityStation
+            
+
         )
     )
 )]

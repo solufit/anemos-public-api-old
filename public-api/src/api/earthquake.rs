@@ -2,6 +2,7 @@ use actix_web::{
     get,
     HttpResponse,
     Responder,
+    web
 };
 use serde::{Deserialize, Serialize};
 
@@ -121,12 +122,12 @@ pub async fn earthquake_eventids_daily() -> impl Responder {
 #[utoipa::path(
     get,
     responses(
-        (status = 200, description = "Earthquake Detail", body = public_api_lib::scheme::earthquake::EarthQuake),
+        (status = 200, description = "Earthquake Detail", body = EarthQuake),
         (status = 404, description = "Not Found", body = NotFound)
     )
 )]
 #[get("/v1/earthquake/{event_id}")]
-pub async fn get_earthquake_detail(event_id: String) -> impl Responder {
+pub async fn get_earthquake_detail(event_id: web::Path<String>) -> impl Responder {
 
     let get_event: String = match public_api_lib::earthquake_operator::get_from_redis(event_id.to_string()).await {
         Ok(event) => event,
