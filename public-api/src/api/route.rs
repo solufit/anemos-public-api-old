@@ -19,6 +19,7 @@ pub fn config(cfg: &mut web::ServiceConfig) {
             .url("/v1/docs/openapi.json", ApiDoc::openapi())
     )
     .service(super::versions::versions)
+    .service(super::earthquake::earthquake_eventids_hourly)
     .default_service(
         web::route().to(route_unmatch)
     );
