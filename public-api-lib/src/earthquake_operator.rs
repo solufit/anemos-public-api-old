@@ -1,5 +1,6 @@
 use std::collections::{HashMap, HashSet};
 use anyhow::{Ok, Result, Error};
+#[allow(unused)]
 use log::{debug, info};
 use crate::scheme::earthquake::EarthQuake;
 use crate::redis::redisOperation;
