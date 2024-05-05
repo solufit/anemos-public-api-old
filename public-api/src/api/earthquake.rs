@@ -62,3 +62,53 @@ pub async fn earthquake_eventids_hourly() -> impl Responder {
     log::debug!("Earthquake eventids hourly endpoint called: {:?}", response);
     HttpResponse::Ok().json(response)
 }
+
+/// Retrieves the earthquake eventids in day.
+/// 
+/// # Returns
+/// 
+/// The earthquake eventids in day.
+/// 
+/// # Errors
+/// 
+/// If an error occurs while retrieving the earthquake eventids, an internal server error will be returned.
+/// 
+/// # Example
+/// 
+/// ```json
+/// 
+/// {
+///    "event_ids": [
+///       "us6000d3z5",
+///       "us6000d3z4",
+///       "us6000d3z3",
+///       "us6000d3z2",
+///       "us6000d3z1",
+///       "us6000d3z0"
+/// ]
+/// }
+/// 
+/// ```
+#[utoipa::path(
+    get,
+    responses(
+        (status = 200, description = "Earthquake eventids in day", body = EarthQuakeEventIDList),
+    ),
+    
+)]
+#[get("/v1/earthquake/eventids/daily")]
+pub async fn earthquake_eventids_daily() -> impl Responder {
+    let event_ids = match public_api_lib::earthquake_operator::get_earthquake_trend_day().await {
+        Ok(event_ids) => event_ids,
+        Err(e) => {
+            log::error!("Failed to get earthquake trend: {:?}", e);
+            return HttpResponse::InternalServerError().finish();
+        }
+    };
+
+    let response = EarthQuakeEventIDList {
+        event_ids,
+    };
+    log::debug!("Earthquake eventids hourly endpoint called: {:?}", response);
+    HttpResponse::Ok().json(response)
+}
