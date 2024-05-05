@@ -133,12 +133,16 @@ pub async fn get_earthquake_detail(event_id: web::Path<String>) -> impl Responde
         Ok(event) => event,
         Err(e) => {
             log::error!("Failed to get earthquake detail: {:?}", e);
+            return HttpResponse::InternalServerError().finish();
+        }
+    };        
+
+    if get_event == *"" {
             let response = NotFound {
                 msg: "Specified eventid was not found.".to_string()
             };
             return HttpResponse::NotFound().json(response)
-        }
-    };        
+    }
 
     let event: public_api_lib::scheme::earthquake::EarthQuake = match serde_json::from_str(&get_event) {
         Ok(event) => event,
