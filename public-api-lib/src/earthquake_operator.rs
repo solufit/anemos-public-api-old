@@ -34,7 +34,7 @@ fn eventid_extractor(earthquake: &EarthQuake) -> String {
 /// 
 /// Returns an error if the Redis operation fails.
 /// 
-async fn get_from_redis(event_id: String) -> Result<String, Error> {
+pub async fn get_from_redis(event_id: String) -> Result<String, Error> {
     let mut redis_op = redisOperation::new().await?;
 
     let result = Cmd::get(format!("earthquake-detail-{}", event_id))
