@@ -112,3 +112,24 @@ pub async fn earthquake_eventids_daily() -> impl Responder {
     log::debug!("Earthquake eventids hourly endpoint called: {:?}", response);
     HttpResponse::Ok().json(response)
 }
+
+
+pub async fn get_earthquake_detail(event_id: &str) -> impl Responder {
+
+    let get_event: String = match public_api_lib::earthquake_operator::get_from_redis(event_id.to_string()).await {
+        Ok(event) => event,
+        Err(e) => {
+            log::error!("Failed to get earthquake detail: {:?}", e);
+            return HttpResponse::InternalServerError().finish();
+        }
+    };        
+
+    let event: public_api_lib::scheme::earthquake::EarthQuake = match serde_json::from_str(&get_event) {
+        Ok(event) => event,
+        Err(e) => {
+            log::error!("Failed to parse earthquake detail: {:?}", e);
+            return HttpResponse::InternalServerError().finish();
+        }
+    };
+    HttpResponse::Ok().json(event)
+}
