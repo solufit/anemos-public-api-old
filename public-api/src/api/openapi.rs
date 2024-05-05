@@ -1,5 +1,8 @@
 use utoipa::OpenApi; 
 
+use super::earthquake;
+use super::versions;
+
 
 #[derive(OpenApi)]
 #[openapi(
@@ -9,11 +12,24 @@ use utoipa::OpenApi;
         version = "0.1.0"
     ),
     paths(
-        super::versions::versions,
+        versions::versions,
+        earthquake::earthquake_eventids_hourly,
+        earthquake::earthquake_eventids_daily,
+        earthquake::get_earthquake_detail
     ),
     components(
         schemas(
-            super::versions::VersionResponse
+            versions::VersionResponse,
+            earthquake::EarthQuakeEventIDList,
+            earthquake::NotFound,
+            public_api_lib::scheme::earthquake::EarthQuake,
+            public_api_lib::scheme::earthquake::Intensity,
+            public_api_lib::scheme::earthquake::Area,
+            public_api_lib::scheme::earthquake::City,
+            public_api_lib::scheme::earthquake::IntensityStationEnum,
+            public_api_lib::scheme::earthquake::IntensityStation
+            
+
         )
     )
 )]
