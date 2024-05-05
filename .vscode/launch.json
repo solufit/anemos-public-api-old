@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust Debug Launch",
+            "program": "${workspaceRoot}/public-api/target/debug/public-api",
+            "args": [],
+            "cwd": "${workspaceRoot}/public-api/target/debug/",
+            "sourceLanguages": ["rust"],
+            "env": {
+                "RUST_LOG" : "debug",
+                "RUST_BACKTRACE" : "full",
+                "PUBLIC_API_REDIS_HOST": "anemos-public-redis-dev"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust public-api-collector Debug Launch",
+            "program": "${workspaceRoot}/public-api-collector/target/debug/public-api-collector",
+            "args": [],
+            "cwd": "${workspaceRoot}/public-api-collector/target/debug/",
+            "sourceLanguages": ["rust"],
+            "env": {
+                "RUST_LOG" : "debug",
+                "RUST_BACKTRACE" : "full",
+                "API_URL" : "http://anemos-commander",
+                "PUBLIC_API_REDIS_HOST": "anemos-public-redis-dev"
+            },
+        }
+
+    ]
+}

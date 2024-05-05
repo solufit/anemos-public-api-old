@@ -12,55 +12,39 @@ services:
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
 
+    environment:
+      RUST_LOG: "debug"
+      RUST_BACKTRACE: "full"
+      API_URL: "http://anemos-commander"
+      PUBLIC_API_REDIS_HOST: "anemos-public-redis-dev"
+
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
     networks:
       - solufit
 
+    env_file:
+      - .envfile
+
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
-
-
-  anemos-maria-database:
-    container_name: anemos-maria-database
-    image: mariadb
-    expose:
-      - 3306
-    volumes:
-      - ./db/maria:/var/lib/mysql
-    restart: always
-    env_file:
-      - .env
-    networks:
-      - solufit
-
-  anemos-mongo-database:
-    container_name: anemos-mongo-database
-    image: mongo
-    restart: always
-    volumes:
-      - ./db/mongo:/data/db
-    ports:
-      - 27171:27017
-    env_file:
-      - .env
-    networks:
-      - solufit
-
-  anemos-redis-database:
-    container_name: anemos-redis-database
+  anemos-public-redis-dev:
+    container_name: anemos-public-redis-dev
     image: redis:latest
     restart: always
     expose:
       - 6379
     volumes:
-      - "./db/redis:/data"
-    env_file:
-      - .env
+      - "./db/redis-public:/data"
+    environment:
+      - REDIS_HOST=anemos-public-redis-dev
     networks:
       - solufit
+    mem_limit: 1g
+
 
 networks:
   solufit:
+    external: true
 
 
 
