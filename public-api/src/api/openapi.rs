@@ -13,7 +13,8 @@ use super::versions;
     ),
     paths(
         versions::versions,
-        earthquake::earthquake_eventids_hourly
+        earthquake::earthquake_eventids_hourly,
+        earthquake::earthquake_eventids_daily
     ),
     components(
         schemas(
