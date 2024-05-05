@@ -10,10 +10,12 @@ use utoipa::OpenApi;
     ),
     paths(
         super::versions::versions,
+        super::earthquake::earthquake_eventids_hourly
     ),
     components(
         schemas(
-            super::versions::VersionResponse
+            super::versions::VersionResponse,
+            super::earthquake::EarthQuakeEventIDList
         )
     )
 )]

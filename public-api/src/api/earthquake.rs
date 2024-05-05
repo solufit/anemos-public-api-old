@@ -13,7 +13,39 @@ pub struct EarthQuakeEventIDList {
     pub event_ids: Vec<String>,
 }
 
-
+/// Retrieves the earthquake eventids in hours.
+/// 
+/// # Returns
+/// 
+/// The earthquake eventids in hours.
+/// 
+/// # Errors
+/// 
+/// If an error occurs while retrieving the earthquake eventids, an internal server error will be returned.
+/// 
+/// # Example
+/// 
+/// ```json
+/// 
+/// {
+///    "event_ids": [
+///       "us6000d3z5",
+///       "us6000d3z4",
+///       "us6000d3z3",
+///       "us6000d3z2",
+///       "us6000d3z1",
+///       "us6000d3z0"
+/// ]
+/// }
+/// 
+/// ```
+#[utoipa::path(
+    get,
+    responses(
+        (status = 200, description = "Earthquake eventids in hours", body = EarthQuakeEventIDList),
+    ),
+    
+)]
 #[get("/v1/earthquake/eventids/hourly")]
 pub async fn earthquake_eventids_hourly() -> impl Responder {
     let event_ids = match public_api_lib::earthquake_operator::get_earthquake_trend_hour().await {
