@@ -1,0 +1,99 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: anemos-public
+
+---
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: anemos-public-scaler
+  namespace: anemos-public
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: anemos-public-api-replica-set 
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      targetAverageUtilization: 50
+
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  namespace: anemos-public
+  name: anemos-public-api-replica-set
+  labels:
+    app: anemos-public-api
+spec:
+  replicas: 2  # 2つのレプリカ
+  selector:
+    matchLabels:
+      app: anemos-public-api
+  template:
+    metadata:
+      labels:
+        app: anemos-public-api
+    spec:
+      containers:
+      - name: anemos-public-api
+        image: solufit.azurecr.io/anemos-public-api:e1a6a9ece18c7b82bbb4db77a78a8172f1e43a2b
+        ports:
+        - containerPort: 8080
+        env:
+        - name: RUST_LOG
+          value: info
+        - name: API_URL
+          value: http://0.0.0.0
+        - name: PUBLIC_API_REDIS_HOST
+          value: solufit-redis-replicas
+      imagePullSecrets:
+      - name: acr-auth
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: anemos-public
+  name: anemos-public-api-collector
+spec:
+  replicas: 1  # デプロイメントのレプリカ数は1に設定
+  selector:
+    matchLabels:
+      app: anemos-public-api-collector
+  template:
+    metadata:
+      labels:
+        app: anemos-public-api-collector
+    spec:
+      containers:
+      - name: anemos-public-api-collector
+        image: solufit.azurecr.io/anemos-public-api-collector:e1a6a9ece18c7b82bbb4db77a78a8172f1e43a2b
+        env:
+        - name: RUST_LOG
+          value: info
+        - name: API_URL
+          value: http://0.0.0.0
+        - name: PUBLIC_API_REDIS_HOST
+          value: solufit-redis-master
+      imagePullSecrets:
+      - name: acr-auth
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: anemos-public
+  name: my-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: anemos-public-api
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+
