@@ -42,7 +42,7 @@ spec:
     spec:
       containers:
       - name: anemos-public-api
-        image: solufit.azurecr.io/anemos-public-api
+        image: solufit.azurecr.io/anemos-public-api:e1a6a9ece18c7b82bbb4db77a78a8172f1e43a2b
         ports:
         - containerPort: 8080
         env:
@@ -52,6 +52,8 @@ spec:
           value: http://0.0.0.0
         - name: PUBLIC_API_REDIS_HOST
           value: solufit-redis-replicas
+      imagePullSecrets:
+      - name: acr-auth
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -70,7 +72,7 @@ spec:
     spec:
       containers:
       - name: anemos-public-api-collector
-        image: solufit.azurecr.io/anemos-public-api-collector
+        image: solufit.azurecr.io/anemos-public-api-collector:e1a6a9ece18c7b82bbb4db77a78a8172f1e43a2b
         env:
         - name: RUST_LOG
           value: info
@@ -78,6 +80,8 @@ spec:
           value: http://0.0.0.0
         - name: PUBLIC_API_REDIS_HOST
           value: solufit-redis-master
+      imagePullSecrets:
+      - name: acr-auth
 ---
 apiVersion: v1
 kind: Service
