@@ -12,7 +12,7 @@ pub struct WeatherWarning {
 #[allow(non_camel_case_types)]
 #[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
 pub struct status {
-    pub prefCode: String,
+    pub prefCode: i32,
     pub prefName: String,
     pub warningName: Vec<String>,
     detail: Vec<detail>
@@ -22,7 +22,7 @@ pub struct status {
 #[allow(non_camel_case_types)]
 #[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
 pub struct detail {
-    pub regionCode: String,
+    pub regionCode: i32,
     pub regionName: String,
     pub warningNames: Vec<String>,
 }
@@ -66,7 +66,7 @@ pub struct Kind {
 #[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
 pub struct Regions {
     pub Region: Region,
-    pub Kind: Kind
+    pub Kind: Vec<RegionsKind>
 }
 
 #[allow(non_snake_case)]
@@ -75,4 +75,28 @@ pub struct Regions {
 pub struct Region {
     pub Name: String,
     pub Code: String,
+}
+
+#[allow(non_snake_case)]
+#[allow(non_camel_case_types)]
+#[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
+pub struct RegionsKind {
+    pub Name: String,
+    pub Code: String,
+    pub Status: String,
+    pub Property: Option<Property>
+}
+
+//TODO add struct more
+#[allow(non_snake_case)]
+#[allow(non_camel_case_types)]
+#[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
+pub struct Property {
+    pub Type: String,
+    pub AdvisoryPeriod: Option<AdvisoryPeriod>,
+    pub WindDirectionPart: Option<WindDirectionPart>,
+    pub WindSpeedPart: Option<WindSpeedPart>,
+    pub AdvisoryPeriod: Option<AdvisoryPeriod>,
+    pub WaveHeightPart: Option<WaveHeightPart>,
+
 }

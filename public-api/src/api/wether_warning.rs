@@ -8,6 +8,7 @@ use serde::{Deserialize, Serialize};
 use public_api_lib::scheme::weather_warning::WeatherWarning;
 use log::{debug, info};
 use once_cell::sync::Lazy;
+use utoipa::openapi::response;
 
 
 
@@ -18,6 +19,7 @@ use once_cell::sync::Lazy;
     ),
 )]
 #[get("/v1/weather_warning/get/{num}")]
+#[allow(clippy::needless_return)]
 pub async fn get_weather_warning(num: web::Path<u32>) -> impl Responder {
     let max_num = num.into_inner();
     
@@ -28,15 +30,29 @@ pub async fn get_weather_warning(num: web::Path<u32>) -> impl Responder {
 
     log::info!("Collecting Weather Warning Data from: {}", &base_url_system);
 
-    let response = reqwest::get(base_url_system.as_str())
-        .await.unwrap()
-        .text()
-        .await.unwrap();  
+    match reqwest::get(base_url_system.as_str()).await {
+        Ok(response) => {
 
-    let deserialized: WeatherWarning = serde_json::from_str(&response).unwrap();
+            match response.text().await  {
+                Ok(text) => {
+                    debug!("Recieved Response: {}", text);
+                    let deserialized: WeatherWarning = serde_json::from_str(&text).unwrap();
+                    debug!("Converted: {:?}", deserialized);
+                    return HttpResponse::Ok().json(deserialized);
+                }
+                Err(e) => {
+                    log::error!("Error: {}", e);
+                    return HttpResponse::InternalServerError().body("ERR");
+            }
+        }
+            
+        }
+        Err(e) => {
+            log::error!("Error: {}", e);
+            return HttpResponse::InternalServerError().body("ERR");
+        }
+    }
 
-    debug!("Converted: {:?}", deserialized);
 
-    HttpResponse::Ok().json(deserialized)
 }
 
