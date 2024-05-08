@@ -11,6 +11,8 @@ use super::wether_warning;
         title = "Anemos API",
         description = r#"
         Anemos API made by solufit. For detail, please visit the web site. https://lp.anemos.solufit.net/
+
+        # Warning!!! This API is under development. The specification may change without notice.
         "#,
         version = "0.1.0"
     ),
