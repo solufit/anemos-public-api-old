@@ -36,9 +36,12 @@ pub async fn get_weather_warning(num: web::Path<u32>) -> impl Responder {
             match response.text().await  {
                 Ok(text) => {
                     debug!("Recieved Response: {}", text);
-                    let deserialized: WeatherWarning = serde_json::from_str(&text).unwrap();
-                    debug!("Converted: {:?}", deserialized);
-                    return HttpResponse::Ok().json(deserialized);
+                    //let deserialized: WeatherWarning = serde_json::from_str(&text).unwrap();
+                    //debug!("Converted: {:?}", deserialized);
+                    //return HttpResponse::Ok().json(deserialized);
+
+                    //return raw data for wip
+                    return HttpResponse::Ok().json(text);
                 }
                 Err(e) => {
                     log::error!("Error: {}", e);
