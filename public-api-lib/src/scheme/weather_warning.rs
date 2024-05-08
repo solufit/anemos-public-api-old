@@ -84,19 +84,19 @@ pub struct RegionsKind {
     pub Name: String,
     pub Code: String,
     pub Status: String,
-    pub Property: Option<Property>
+ //   pub Property: Option<Property>
 }
 
 //TODO add struct more
-#[allow(non_snake_case)]
-#[allow(non_camel_case_types)]
-#[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
-pub struct Property {
-    pub Type: String,
-    pub AdvisoryPeriod: Option<AdvisoryPeriod>,
-    pub WindDirectionPart: Option<WindDirectionPart>,
-    pub WindSpeedPart: Option<WindSpeedPart>,
-    pub AdvisoryPeriod: Option<AdvisoryPeriod>,
-    pub WaveHeightPart: Option<WaveHeightPart>,
+//#[allow(non_snake_case)]
+//#[allow(non_camel_case_types)]
+//#[derive(Debug, Serialize, Deserialize, Clone, ToSchema)]
+//pub struct Property {
+//    pub Type: String,
+//    pub AdvisoryPeriod: Option<AdvisoryPeriod>,
+//    pub WindDirectionPart: Option<WindDirectionPart>,
+//    pub WindSpeedPart: Option<WindSpeedPart>,
+//    pub AdvisoryPeriod: Option<AdvisoryPeriod>,
+//    pub WaveHeightPart: Option<WaveHeightPart>,
 
-}
+//}
