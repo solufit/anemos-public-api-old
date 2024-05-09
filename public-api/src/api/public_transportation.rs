@@ -30,7 +30,7 @@ pub async fn get_public_transportation_area() -> impl Responder {
                 Ok(text) => {
                     debug!("Recieved Response: {}", text);
 
-                    return HttpResponse::Ok().body(text)
+                    return HttpResponse::Ok().json(text)
                 }
                 Err(e) => {
                     log::error!("ERR! {}", e);
@@ -58,7 +58,7 @@ pub async fn get_public_transportation_area() -> impl Responder {
 #[get("/v1/public-transportation/get-line/{area}")]
 pub async fn get_public_transportation_area_to_line(area: web::Path<String>) -> impl Responder {
     static BASE_URL: Lazy<std::string::String> = Lazy::new(|| {
-        format!("{}/config/pti/area", *public_api_lib::get_env::API_URL)
+        format!("{}/config/pti/line", *public_api_lib::get_env::API_URL)
     });
     let base_url = format!("{}?area={}", *BASE_URL, area);
 
@@ -69,7 +69,7 @@ pub async fn get_public_transportation_area_to_line(area: web::Path<String>) -> 
                 Ok(text) => {
                     debug!("Recieved Response: {}", text);
 
-                    return HttpResponse::Ok().body(text)
+                    return HttpResponse::Ok().json(text)
                 }
                 Err(e) => {
                     log::error!("ERR! {}", e);
@@ -91,15 +91,18 @@ pub async fn get_public_transportation_area_to_line(area: web::Path<String>) -> 
 #[utoipa::path(
     get,
     responses(
-        (status = 200, description = "Public Transportation line")
+        (status = 200, description = "Public Transportation line info")
     )
 )]
-#[get("/v1/public-transportation/get-line/{line}")]
+#[get("/v1/public-transportation/get-line-info/{line}")]
 pub async fn get_public_transportation_line(line: web::Path<String>) -> impl Responder {
     static BASE_URL: Lazy<std::string::String> = Lazy::new(|| {
-        format!("{}/config/pti/line", *public_api_lib::get_env::API_URL)
+        format!("{}/get/pti?ptid=", *public_api_lib::get_env::API_URL)
     });
-    let base_url = format!("{}?line={}", *BASE_URL, line);
+    log::debug!("line: {}", line);
+    let base_url = format!("{}{}", *BASE_URL, line);
+
+    log::debug!("base_url: {}", base_url);
 
     match reqwest::get(base_url).await {
         Ok(response) => {
@@ -108,7 +111,7 @@ pub async fn get_public_transportation_line(line: web::Path<String>) -> impl Res
                 Ok(text) => {
                     debug!("Recieved Response: {}", text);
 
-                    return HttpResponse::Ok().body(text)
+                    return HttpResponse::Ok().json(text)
                 }
                 Err(e) => {
                     log::error!("ERR! {}", e);
