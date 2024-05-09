@@ -23,6 +23,9 @@ pub fn config(cfg: &mut web::ServiceConfig) {
     .service(super::earthquake::earthquake_eventids_daily)
     .service(super::earthquake::get_earthquake_detail)
     .service(super::wether_warning::get_weather_warning)
+    .service(super::public_transportation::get_public_transportation_area)
+    .service(super::public_transportation::get_public_transportation_area_to_line)
+    .service(super::public_transportation::get_public_transportation_line)
     .default_service(
         web::route().to(route_unmatch)
     );
