@@ -62,7 +62,7 @@ pub async fn get_public_transportation_line(area: web::Path<String>) -> impl Res
     });
     let base_url = format!("{}?area={}", *BASE_URL, area);
 
-    match reqwest::get(BASE_URL.to_string()).await {
+    match reqwest::get(base_url).await {
         Ok(response) => {
 
             match response.text().await {
