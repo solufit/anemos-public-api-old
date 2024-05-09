@@ -1,9 +1,11 @@
 use utoipa::OpenApi; 
 
-use super::earthquake;
-use super::versions;
-use super::wether_warning;
-
+use super::{
+    earthquake,
+    versions,
+    wether_warning,
+    public_transportation
+};
 
 #[derive(OpenApi)]
 #[openapi(
@@ -21,7 +23,10 @@ use super::wether_warning;
         earthquake::earthquake_eventids_hourly,
         earthquake::earthquake_eventids_daily,
         earthquake::get_earthquake_detail,
-        wether_warning::get_weather_warning
+        wether_warning::get_weather_warning,
+        public_transportation::get_public_transportation_area,
+        public_transportation::get_public_transportation_area_to_line,
+        public_transportation::get_public_transportation_line
     ),
     components(
         schemas(
