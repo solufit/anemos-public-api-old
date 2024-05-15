@@ -2,8 +2,9 @@
 
 ## メタデータ
 
-公式HP： https://anemos.solufit.net
-Solufit共通開発者向けポータル： https://4dev.solufit.net
+[公式HP](https://anemos.solufit.net)
+
+[Solufit共通開発者向けポータル](https://4dev.solufit.net)
 
 ## 作品歴
 
@@ -12,6 +13,6 @@ Solufit共通開発者向けポータル： https://4dev.solufit.net
 ## Solufit開発者追加マニュアル
 
 1. SolufitのADにて@solufit.netのアカウントを発行
-2. 4dev(https://4dev.solufit.net)でSolufit Di認証にてログイン後、プロフィール登録
+2. [4dev](https://4dev.solufit.net)でSolufit Di認証にてログイン後、プロフィール登録
 3. Discordアカウントの登録
-4. GithubのSolufit Teamについか
+4. GithubのSolufit Teamに追加
