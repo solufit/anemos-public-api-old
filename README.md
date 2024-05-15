@@ -6,6 +6,15 @@
 
 [Solufit共通開発者向けポータル](https://4dev.solufit.net)
 
+## 関連リポジトリ
+
+### Solufit防災情報
+
+[webサイト](https://hazard.solufit.net)
+
+[リポジトリ](https://github.com/solufit/hazard)
+
+
 ## 作品歴
 
 2024/05 株式会社サポーターズ主催 技育博202405にてウイングアーク1st様より企業賞を受賞
